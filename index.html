@@ -12,10 +12,40 @@
     <title>HIGHER lower - a deductive game of chance!</title>
 </head>
 <body>
-    <div class="heading">HIGHER lower</div>
-    <h1>Let's play
+    <div class="heading">
+    <h1>HIGHER lower - a game of chance!
         <img src="assets/images/apple-touch-icon.png" alt="icon">
     </h1>
+    </div>
+
+<!-- game area containing random numbers div, voting div, increment score div, and timer div -->
+    <div class="game-area">
+
+        <div class="random-numbers">
+            <button class="button big-button red-button" type="button" value="button">1</button>
+            <button class="button big-button orange-button" type="button" value="button">2</button>
+            <button class="button big-button yellow-button" type="button" value="button">3</button>
+            <button class="button big-button green-button" type="button" value="button">4</button>
+            <button class="button big-button blue-button" type="button" value="button">5</button>
+
+
+        </div>
+
+        <div class="vote-box">
+            <span><button id="choose-Higher" type="button" value="button">Higher</button></span>
+            <span><button id="choose-Lower" type="button" value="button">Lower</button></span>
+
+        </div>
+
+    </div>
+
+    <div class="increment-scores" >
+        <p class="tally"> Correct <span id="tally-correct">0</span> Incorrect <span id="tally-incorrect">0</span></p>
+
+    </div>
+<!-- optional if I have time -->
+    <div class="timer">Against the clock!</div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
