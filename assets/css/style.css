@@ -1,3 +1,10 @@
+/* Plain white background with game area in colour for contrast */
+
 body {
-    background-color: blue;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #3a3a3a;
+    text-align: center;
+
 }
+
