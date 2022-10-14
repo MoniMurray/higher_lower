@@ -28,7 +28,7 @@ body {
     max-width: 850px;
     margin: auto;
     padding: 1%;
-    background-color: aquamarine;
+    background-color: #9a9a9a;
 }
 
 /* from Love Maths */
@@ -39,5 +39,15 @@ body {
     margin: auto;
     padding: 1em 0;
 
+}
+/* Similar in principle to 'answer-box' in LM */
+.vote-box {
 
+    border: none;
+    color: #3a3a3a;
+    display: inline-block;
+    height: 2.5em;
+    width: 7em;
+    font-size: 1.2rem;
+    padding-top: 5%;
 }
