@@ -51,3 +51,25 @@ body {
     font-size: 1.2rem;
     padding-top: 5%;
 }
+
+/* using a similar style to that used in the Score area of LM */
+.increment-scores {
+    margin: 5px auto;
+    width: 65%;
+    font-size: 1.2rem;
+}
+
+.tally {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+#tally-correct {
+    color: darkblue;
+    font-weight: bold;
+}
+
+#tally-incorrect {
+    color: darkgreen;
+    font-weight: bold;
+}
