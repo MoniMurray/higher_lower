@@ -1,7 +1,7 @@
 /* Plain white background with game area in colour for contrast */
 
 body {
-    background-color: white;
+    background-color: #F0E9E8;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #3a3a3a;
     text-align: center;
@@ -119,57 +119,57 @@ body {
 }
 
 .red-button {
-    border-color: red;
-    color: red;
+    border-color: #540D6E;
+    color: #540D6Eed;
 }
 
 /* in testing (add to README.md) hover would not work.  This is because (w3schools tells me) :active must come after :hover,. */
 .red-button:hover, .red-button:active {
-    background-color: red;
+    background-color: #540D6E;
     color: white;
 }
 
 .orange-button {
     
-    border-color: orange;
-    color: orange;
+    border-color: #EE4266;
+    color: #EE4266;
 }
 
 
 .orange-button:hover, .orange-button:active {
-    background-color: orange;
+    background-color: #EE4266;
     color: white;
 }
 
 .purple-button {
-    border-color: purple;
-    color: purple;
+    border-color: #FFD23F;
+    color: #FFD23F;
 }
 
 
 .purple-button:hover, .purple-button:active {
-    background-color: purple;
+    background-color: #FFD23F;
     color: white;
 }
 
 .green-button {
-    border-color: green;
-    color: green;
+    border-color: #3BCEAC;
+    color: #3BCEAC;
 }
 
 
 .green-button:hover, .green-button:active {
-    background-color: green;
+    background-color: #3BCEAC;
     color: white;
 }
 
 .blue-button {
-    border-color: blue;
-    color: blue;
+    border-color: #0EAD69;
+    color: #0EAD69;
 }
 
 
 .blue-button:hover, .blue-button:active {
-    background-color: blue;
+    background-color: #0EAD69;
     color: white;
 }
