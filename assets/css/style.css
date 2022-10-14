@@ -12,7 +12,21 @@ body {
     text-align: center;
     font-size: large;
 }
+
 .logo {
     height: 6em;
     padding: auto;
+}
+
+/* style the area the game will be contained within */
+
+.game-area {
+    box-sizing: border-box;
+    height: 80%;
+    width: 80%;
+    max-height: 850px;
+    max-width: 850px;
+    margin: auto;
+    padding: 1%;
+    background-color: aquamarine;
 }
