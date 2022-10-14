@@ -30,3 +30,14 @@ body {
     padding: 1%;
     background-color: aquamarine;
 }
+
+/* from Love Maths */
+.random-numbers {
+    border: 1px solid;
+    width: 50%;
+    font-size: 2em;
+    margin: auto;
+    padding: 1em 0;
+
+
+}
