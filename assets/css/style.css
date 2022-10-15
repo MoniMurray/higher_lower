@@ -31,6 +31,22 @@ body {
     background-color: #9a9a9a;
 }
 
+.start-game {
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: silver;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.start-game:hover, .start-game:active {
+    background-color: black;
+    color: silver;
+}
+
 /* from Love Maths */
 .random-numbers {
     border: 1px solid;
