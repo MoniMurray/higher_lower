@@ -1,15 +1,37 @@
 
+/**Game is to generate 5 random numbers between 1-20, user must guess whether each consecutive number is Higher or Lower than the 
+ * previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button. 
+ */
 
-// Event listener for DOM load and Start Game button click
+// Event listener for DOM load and startGame on button click
+
+document 
 
 
-function randomNumbers () {
-
-}
+// function to startGame and reveal numbers
 
 function startGame () {
 
 }
+
+function randomNumbers () {
+    
+let num1 = Math.floor(Math.random()*21);
+let num2 = Math.floor(Math.random()*21);
+let num3 = Math.floor(Math.random()*21);
+let num4 = Math.floor(Math.random()*21);
+let num5 = Math.floor(Math.random()*21);
+
+}
+// function to allow user guess Higher/Lower
+
+
+// function to increment score
+
+
+
+
+
 
 
 
