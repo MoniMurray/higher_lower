@@ -47,27 +47,29 @@ body {
     color: #3a3a3a;
     display: inline-block;
     height: 2.5em;
-    width: 7em;
+    /* width: 7em; */
     font-size: 1.2rem;
     padding-top: 5%;
 }
 
-#chooseHigher {
+#choose-Higher {
     border-color: #3a3a3a;
     color: #3a3a3a;
+    font-size: 2rem;
 }
 
-#chooseHigher:hover {
+#choose-Higher:hover {
     background-color: #3a3a3a;
-    color: white
+    color: white;
 }
 
-#chooseLower {
+#choose-Lower {
     border-color: #3a3a3a;
     color: #3a3a3a;
+    font-size: 2rem;
 }
 
-#chooseLower:hover {
+#choose-Lower:hover {
     background-color: #3a3a3a;
     color: white;
 }
@@ -172,4 +174,11 @@ body {
 .blue-button:hover, .blue-button:active {
     background-color: #0EAD69;
     color: white;
+}
+
+/* Trying out Canvas */
+#myCanvas {
+    width: 600px;
+    height: 400px;
+    border: 1px solid;
 }
