@@ -3,9 +3,30 @@
  * previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button. 
  */
 
-// Event listener for DOM load and startGame on button click
+// Event listener for DOM load and to startGame on button click
 
-document 
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+  for (let button of buttons) {
+    button.addEventListener('click', function () {
+
+        if (this.getElementsByClassName("start-game")) {
+            startGame();
+            alert("Starting Game");
+        } else 
+            if (this.getElementsByClassName("choose-Higher")) {
+            
+            alert(`Your guess was ${}`);
+        } else 
+            if (this.getElementsByClassName("choose-Lower")) {
+            
+            alert(`Your guess was ${}`);
+        }
+    }}
+})
+
+  }
+})
 
 
 // function to startGame and reveal numbers
@@ -15,7 +36,7 @@ function startGame () {
 }
 
 function randomNumbers () {
-    
+
 let num1 = Math.floor(Math.random()*21);
 let num2 = Math.floor(Math.random()*21);
 let num3 = Math.floor(Math.random()*21);
@@ -23,6 +44,7 @@ let num4 = Math.floor(Math.random()*21);
 let num5 = Math.floor(Math.random()*21);
 
 }
+
 // function to allow user guess Higher/Lower
 
 
