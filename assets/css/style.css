@@ -30,6 +30,9 @@ body {
     padding: 1%;
     background-color: silver;
 }
+.sign-in::after {
+
+}
 
 .start-game {
     margin: 20px;
@@ -48,7 +51,7 @@ body {
     color: silver;
 }
 
-.directions {
+.directions, .sign-in {
     display: inline-block;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2rem;
@@ -144,58 +147,58 @@ body {
     transition: all 0.5s;
 }
 
-.red-button {
+.purple-button {
     border-color: #540D6E;
     color: #540D6Eed;
 }
 
 /* in testing (add to README.md) hover would not work.  This is because (w3schools tells me) :active must come after :hover,. */
-.red-button:hover, .red-button:active {
+.purple-button:hover, .purple-button:active {
     background-color: #540D6E;
     color: white;
 }
 
-.orange-button {
+.pink-button {
     
     border-color: #EE4266;
     color: #EE4266;
 }
 
 
-.orange-button:hover, .orange-button:active {
+.pink-button:hover, .pink-button:active {
     background-color: #EE4266;
     color: white;
 }
 
-.purple-button {
+.yello-button {
     border-color: #FFD23F;
     color: #FFD23F;
 }
 
 
-.purple-button:hover, .purple-button:active {
+.yellow-button:hover, .yellow-button:active {
     background-color: #FFD23F;
     color: white;
 }
 
-.green-button {
+.blue-button {
     border-color: #3BCEAC;
     color: #3BCEAC;
 }
 
 
-.green-button:hover, .green-button:active {
+.blue-button:hover, .blue-button:active {
     background-color: #3BCEAC;
     color: white;
 }
 
-.blue-button {
+.green-button {
     border-color: #0EAD69;
     color: #0EAD69;
 }
 
 
-.blue-button:hover, .blue-button:active {
+.green-button:hover, .green-button:active {
     background-color: #0EAD69;
     color: white;
 }

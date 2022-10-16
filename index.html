@@ -19,18 +19,24 @@
     </h1>
     </div>
 
+    
+
 <!-- game area containing random numbers div, voting div, increment score div, and timer div -->
     <div class="game-area">
-        <button class="start-game" type="button" onclick="startGame()">Start Game!</button>
-
+        
+    <!-- A sign-in input box which will load the game when submitted -->
+        <div class="sign-in" >
+            <label for="sign-in">Please sign in: </label>
+            <input class="sign-in" type="text" required placeholder="Enter your name here"><br>
+            <button class="start-game" type="submit" onclick="startGame()">Enter Game!</button>
+        </div>
+<div class="game">
         <div class="random-numbers">
-            <button class="button big-button red-button" type="button" value="button">?</button>
-            <button class="button big-button orange-button" type="button" value="button">?</button>
             <button class="button big-button purple-button" type="button" value="button">?</button>
-            <button class="button big-button green-button" type="button" value="button">?</button>
+            <button class="button big-button pink-button" type="button" value="button">?</button>
+            <button class="button big-button yellow-button" type="button" value="button">?</button>
             <button class="button big-button blue-button" type="button" value="button">?</button>
-
-
+            <button class="button big-button green-button" type="button" value="button">?</button>
         </div>
 
         <div class="vote-box">
@@ -38,7 +44,7 @@
             <span><button id="choose-Lower" type="button" value="button">Lower</button></span>
 
         </div>
-
+    </div>
     </div>
     <div class="directions">
         <h1 >Directions:</h1>

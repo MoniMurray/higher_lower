@@ -6,42 +6,61 @@
 // Event listener for DOM load and to startGame on button click
 
 document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-  for (let button of buttons) {
-    button.addEventListener('click', function () {
+    document.getElementById("game").display = none;
 
-        if (this.getElementsByClassName("start-game")) {
-            startGame();
-            alert("Starting Game");
-        } else 
-            if (this.getElementsByClassName("choose-Higher")) {
-            
-            alert(`Your guess was ${}`);
-        } else 
-            if (this.getElementsByClassName("choose-Lower")) {
-            
-            alert(`Your guess was ${}`);
-        }
-    }}
+    let playerName = document.getElementsByTagName("input").value;
+    let signIn = document.getElementById("start-game").click;
+    signIn.addEventListener("playerName", function(event){
+        if (event.key === "Enter") {
+        alert(`Let's play ${playerName}`);
+        startGame();
+    } else {
+            alert("You must sign in to play");
+    }
+    })
 })
 
-  }
-})
+
+
+
+//     let buttons = document.getElementsByTagName("button");
+//   for (let button of buttons) {
+//     button.addEventListener('click', function () {
+
+//         if (this.getElementsByClassName("start-game")) {
+//             startGame();
+//             alert("Starting Game");
+//         } else 
+//             if (this.getElementsByClassName("choose-Higher")) {
+            
+//             alert(`Your guess was ${}`);
+//         } else 
+//             if (this.getElementsByClassName("choose-Lower")) {
+            
+//             alert(`Your guess was ${}`);
+//         }
+//     }}
+// })
 
 
 // function to startGame and reveal numbers
 
 function startGame () {
 
+    document.getElementById("game").display = block;
+    
+    let num1 = Math.floor(Math.random()*21);
+    let num2 = Math.floor(Math.random()*21);
+    let num3 = Math.floor(Math.random()*21);
+    let num4 = Math.floor(Math.random()*21);
+    let num5 = Math.floor(Math.random()*21);
 }
 
 function randomNumbers () {
 
-let num1 = Math.floor(Math.random()*21);
-let num2 = Math.floor(Math.random()*21);
-let num3 = Math.floor(Math.random()*21);
-let num4 = Math.floor(Math.random()*21);
-let num5 = Math.floor(Math.random()*21);
+    document.getElementById("purple-button") = num1;
+    num1.display.none;
+
 
 }
 
