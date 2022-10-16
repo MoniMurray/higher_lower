@@ -37,21 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }})
 }
     // document.getElementById("vote-box").addEventListener("click", compareValue());
-// IF THESE NUMBERS AND NUMARRAY WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION
-    let num1 = Math.floor(Math.random()*21);
-    
-    // document.getElementById("purple-button").value = num1;
-    let num2 = Math.floor(Math.random()*21);
-    // num2.value = parseInt(document.getElementById("pink-button").innerText);
-    let num3 = Math.floor(Math.random()*21);
-    // num3.value = parseInt(document.getElementById("yellow-button").innerText);
-    let num4 = Math.floor(Math.random()*21);
-    // num4.value = parseInt(document.getElementById("blue-button").innerText);
-    let num5 = Math.floor(Math.random()*21);
-    // num5.value = parseInt(document.getElementById("green-button").innerText);
-    
-    let numArray = [num1, num2, num3, num4, num5];
-    console.log(numArray);
+
 
     })
 
@@ -62,12 +48,26 @@ document.addEventListener("DOMContentLoaded", function() {
     
 
  function startGame () {   
-
-    document.getElementById("purple-button").innerText = numArray[0];
-    document.getElementById("pink-button") = numArray[1];
-    document.getElementById("yellow-button") = numArray[2];
-    document.getElementById("blue-button") = numArray[3];
-    document.getElementById("green-button") = numArray[4];
+// IF THESE NUMBERS AND numArray WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION - how do I do this?
+    let num1 = Math.floor(Math.random()*21);
+    
+    document.getElementById("purple-button").innerHTML = num1;
+    let num2 = Math.floor(Math.random()*21);
+    document.getElementById("pink-button").innerHTML = num2;
+    let num3 = Math.floor(Math.random()*21);
+    document.getElementById("yellow-button").innerHTML = num3;
+    let num4 = Math.floor(Math.random()*21);
+    document.getElementById("blue-button").innerHTML = num4;
+    let num5 = Math.floor(Math.random()*21);
+    document.getElementById("green-button").innerHTML = num5;
+    
+    let numArray = [num1, num2, num3, num4, num5];
+    console.log(numArray);
+    // document.getElementById("purple-button").innerText = numArray[0];
+    // document.getElementById("pink-button") = numArray[1];
+    // document.getElementById("yellow-button") = numArray[2];
+    // document.getElementById("blue-button") = numArray[3];
+    // document.getElementById("green-button") = numArray[4];
 }
     
 
