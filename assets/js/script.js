@@ -6,7 +6,7 @@
 // Event listener for DOM load and to startGame on button click
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("game").display = none;
+    document.getElementById("game").style.display = 'none';
 
     let playerName = document.getElementsByTagName("input").value;
     let signIn = document.getElementById("start-game").click;
@@ -46,14 +46,22 @@ document.addEventListener("DOMContentLoaded", function() {
 // function to startGame and reveal numbers
 
 function startGame () {
-
-    document.getElementById("game").display = block;
-    
     let num1 = Math.floor(Math.random()*21);
+    num1.value = document.getElementById("purple-button").innerText;
     let num2 = Math.floor(Math.random()*21);
+    num2.value = document.getElementById("pink-button").innerText;
     let num3 = Math.floor(Math.random()*21);
+    num3.value = document.getElementById("yellow-button").innerText;
     let num4 = Math.floor(Math.random()*21);
+    num4.value = document.getElementById("blue-button").innerText;
     let num5 = Math.floor(Math.random()*21);
+    num5.value = document.getElementById("green-button").innerText;
+
+    let numArray = [num1, num2, num3, num4, num5];
+let i = 0
+for (let i = 0; i < numArray.length; i++) {
+    console.log(numArray[i]);
+}
 }
 
 function randomNumbers () {
@@ -66,12 +74,28 @@ function randomNumbers () {
 
 // function to allow user guess Higher/Lower
 
+// function to check whether user's guess matched hidden number
 
-// function to increment score
+function checkGuess () {
+    let userGuessHigher = document.getElementById("choose-Higher");
+    let userGuessLower = document.getElementById("choose-Lower");
 
+    let revealedAnswer = startGame(numArray[i])
+} 
 
+// function to increment correct guesses - based on the Score area from Love Maths
 
+function correctGuessTally () {
+    let oldScore = parseInt(document.getElementById("tally-Correct")).innertext;
+    document.getElementById("tally-Correct").innertext = ++oldScore;
+}
 
+// function to increment incorrect guesses - based on the Score area from Love Maths
+
+function incorrectGuessTally () {
+    let oldScore = parseInt(document.getElementById("tally-Incorrect")).innertext;
+    document.getElementById("tally-Incorrect").innertext = ++oldScore;
+}
 
 
 
