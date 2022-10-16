@@ -63,19 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
     
     let numArray = [num1, num2, num3, num4, num5];
     console.log(numArray);
-    // document.getElementById("purple-button").innerText = numArray[0];
-    // document.getElementById("pink-button") = numArray[1];
-    // document.getElementById("yellow-button") = numArray[2];
-    // document.getElementById("blue-button") = numArray[3];
-    // document.getElementById("green-button") = numArray[4];
 }
     
 
-    function compareTwoValues () {
+function compareTwoValues () {
         document.getElementById()
         // let Higher;
         // let Lower;
-        // let result;
     // for (let i = 1; i < numArray.length; i++) 
         let i = 1;
     
@@ -85,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if ((numArray[i-1]) < numArray[i]) {
         return Higher;
     } else {
-        result = Equal;
+        return Equal;
     }
 }
     }
-    console.log('result');
+    console.log('return');
 // compare result (Higher/Lower) to userGuess
 
 
