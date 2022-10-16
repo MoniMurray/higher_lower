@@ -6,74 +6,93 @@
 // Event listener for DOM load and to startGame on button click
 
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("game").style.display = 'none';
+//    
+//     let playerName = document.getElementsByTagName("input").value;
+//     // let signIn = document.getElementById("start-game").click;
+//     signIn.addEventListener("playerName", function(event){
+//         if (event.key === "Enter") {
+//         alert(`Let's play ${playerName}`);
+//         startGame();
+//     } else {
+//             alert("You must sign in to play");
+//     }
+//     })
+// })
 
-    let playerName = document.getElementsByTagName("input").value;
-    let signIn = document.getElementById("start-game").click;
-    signIn.addEventListener("playerName", function(event){
-        if (event.key === "Enter") {
-        alert(`Let's play ${playerName}`);
-        startGame();
-    } else {
-            alert("You must sign in to play");
-    }
-    })
-})
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.addEventListener('click', function () {
 
-
-
-
-//     let buttons = document.getElementsByTagName("button");
-//   for (let button of buttons) {
-//     button.addEventListener('click', function () {
-
-//         if (this.getElementsByClassName("start-game")) {
-//             startGame();
-//             alert("Starting Game");
-//         } else 
+        if (this.getAttribute("data-type") === "submit") {
+            startGame();
+            alert("Starting Game");
+        } else {
 //             if (this.getElementsByClassName("choose-Higher")) {
-                
+
 //             alert(`Your guess was ${}`);
 //         } else 
 //             if (this.getElementsByClassName("choose-Lower")) {
             
-//             alert(`Your guess was ${}`);
-//         }
-//     }}
-// })
+            alert("Error");
+        }})
+}
+    // document.getElementById("vote-box").addEventListener("click", compareValue());
+// IF THESE NUMBERS AND NUMARRAY WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION
+    let num1 = Math.floor(Math.random()*21);
+    
+    // document.getElementById("purple-button").value = num1;
+    let num2 = Math.floor(Math.random()*21);
+    // num2.value = parseInt(document.getElementById("pink-button").innerText);
+    let num3 = Math.floor(Math.random()*21);
+    // num3.value = parseInt(document.getElementById("yellow-button").innerText);
+    let num4 = Math.floor(Math.random()*21);
+    // num4.value = parseInt(document.getElementById("blue-button").innerText);
+    let num5 = Math.floor(Math.random()*21);
+    // num5.value = parseInt(document.getElementById("green-button").innerText);
+    
+    let numArray = [num1, num2, num3, num4, num5];
+    console.log(numArray);
+
+    })
 
 
 // function to startGame and reveal numbers
 
-function startGame () {
-    let num1 = Math.floor(Math.random()*21);
-    num1.value = parseInt(document.getElementById("purple-button").innerText);
-    let num2 = Math.floor(Math.random()*21);
-    num2.value = parseInt(document.getElementById("pink-button").innerText);
-    let num3 = Math.floor(Math.random()*21);
-    num3.value = parseInt(document.getElementById("yellow-button").innerText);
-    let num4 = Math.floor(Math.random()*21);
-    num4.value = parseInt(document.getElementById("blue-button").innerText);
-    let num5 = Math.floor(Math.random()*21);
-    num5.value = parseInt(document.getElementById("green-button").innerText);
 
-    let numArray = [num1, num2, num3, num4, num5];
-    let Higher;
-    let Lower;
-    let result;
-    // for (let i = 1; i < numArray.length; i++) 
-    let i = 1;
     
-    function compareValue () {
-        if(prev(numArray[i]) > numArray[i]); {
-        result = Lower;
-        } else if (prev(numArray[i]) < numArray[i]) {
-         result = Higher;
+
+ function startGame () {   
+
+    document.getElementById("purple-button").innerText = numArray[0];
+    document.getElementById("pink-button") = numArray[1];
+    document.getElementById("yellow-button") = numArray[2];
+    document.getElementById("blue-button") = numArray[3];
+    document.getElementById("green-button") = numArray[4];
+}
+    
+
+    function compareTwoValues () {
+        document.getElementById()
+        // let Higher;
+        // let Lower;
+        // let result;
+    // for (let i = 1; i < numArray.length; i++) 
+        let i = 1;
+    
+        if(numArray[i-1] > numArray[i]) {
+        return Lower;
+        } else {
+        if ((numArray[i-1]) < numArray[i]) {
+        return Higher;
+    } else {
+        result = Equal;
     }
 }
+    }
+    console.log('result');
 // compare result (Higher/Lower) to userGuess
-}
-}
+
+
 
 function randomNumbers () {
 
@@ -163,5 +182,4 @@ function incorrectGuessTally () {
 //     c.fillstyle = "Black"
 //     c.font = "72px Arial";
 //     c.fillText = (flip, xloc, yloc);
-// }
 // }
