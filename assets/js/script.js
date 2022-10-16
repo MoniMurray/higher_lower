@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //             alert("Starting Game");
 //         } else 
 //             if (this.getElementsByClassName("choose-Higher")) {
-            
+                
 //             alert(`Your guess was ${}`);
 //         } else 
 //             if (this.getElementsByClassName("choose-Lower")) {
@@ -47,20 +47,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function startGame () {
     let num1 = Math.floor(Math.random()*21);
-    num1.value = document.getElementById("purple-button").innerText;
+    num1.value = parseInt(document.getElementById("purple-button").innerText);
     let num2 = Math.floor(Math.random()*21);
-    num2.value = document.getElementById("pink-button").innerText;
+    num2.value = parseInt(document.getElementById("pink-button").innerText);
     let num3 = Math.floor(Math.random()*21);
-    num3.value = document.getElementById("yellow-button").innerText;
+    num3.value = parseInt(document.getElementById("yellow-button").innerText);
     let num4 = Math.floor(Math.random()*21);
-    num4.value = document.getElementById("blue-button").innerText;
+    num4.value = parseInt(document.getElementById("blue-button").innerText);
     let num5 = Math.floor(Math.random()*21);
-    num5.value = document.getElementById("green-button").innerText;
+    num5.value = parseInt(document.getElementById("green-button").innerText);
 
     let numArray = [num1, num2, num3, num4, num5];
-let i = 0
-for (let i = 0; i < numArray.length; i++) {
-    console.log(numArray[i]);
+    let Higher;
+    let Lower;
+    let result;
+    // for (let i = 1; i < numArray.length; i++) 
+    let i = 1;
+    
+    function compareValue () {
+        if(prev(numArray[i]) > numArray[i]); {
+        result = Lower;
+        } else if (prev(numArray[i]) < numArray[i]) {
+         result = Higher;
+    }
+}
+// compare result (Higher/Lower) to userGuess
 }
 }
 
