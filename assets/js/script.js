@@ -75,8 +75,11 @@ if (userLoggedIn) {
     return numArray;
     console.log(numArray);
 
+    
+
     let i = 1;
-    while (i < numArray.length) {
+    let numArrayLength = numArray.length;
+    while (i < numArrayLength) {
         compareTwoValues(number1: numArray[i--], number2: numArray[i]);
         i++;
     }
@@ -89,9 +92,19 @@ if (userLoggedIn) {
     // } else {
     //     return equal;
     // }
+    compareTwoValues(numArray[2-1], numArray[2]);
+    console.log(result);
+    
+    let buttonArray = [
+        document.getElementById("purple-button"),
+        document.getElementById("pink-button"),
+        document.getElementById("yellow-button"),
+        document.getElementById("blue-button"),
+        document.getElementById("green-button")];
+        
+    
 }
-compareTwoValues(numArray[2-1], numArray[2]);
-console.log(result);
+
 
 // *.random-numbers is the html class  name of the div containing the 5 buttons for the game into which will go the random numbers in numArray */
 function randomNumbers () {
@@ -120,6 +133,7 @@ function compareTwoValues (number1, number2) {
         alert("The numbers are the same!Let's continue!!");
         compareTwoValues(number1: numArray[i--], number2: numArray[i]);
     }
+    alert (`Game over! Well played!! Your score is ${correctGuessTally()}`)
 }
     }
 // compare result (Higher/Lower) to userGuess
@@ -132,13 +146,6 @@ function compareTwoValues (number1, number2) {
  * code for number being tested is higher than previous number = chooseHigher ? jump to next number : game over;
  * code for number being tested is lower than previous number = chooseLower ? jump to next number : game over;
 
-function randomNumbers () {
-
-    document.getElementById("purple-button") = num1;
-    num1.display.none;
-
-
-}
 
 // function to allow user guess Higher/Lower
 
