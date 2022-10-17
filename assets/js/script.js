@@ -41,10 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
+// User login
+
+let userLoggedIn = false;
+if (userLoggedIn) {
+    alert("Welcome, let's play!");
+} else {
+    alert("Please log in to play");
+}
 
 
 
-  // function to generate numbers
+  // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
 // IF THESE NUMBERS AND numArray WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION - how do I do this?
@@ -60,41 +68,51 @@ document.addEventListener("DOMContentLoaded", function() {
     let num5 = Math.floor(Math.random()*21);
     // document.getElementById("green-button").innerHTML = num5;
     
-    var numArray = [num1, num2, num3, num4, num5];
+    let numArray = [num1, num2, num3, num4, num5];
+    return numArray;
     console.log(numArray);
 
-    for (let i = 1; i < numArray.length; i++) {
-        if (numArray[i-1] > numArray[i] === true) {
-        return lower;
-    } else if (numArray[i-1] < numArray[i] === true) {
-        return higher;
-        
-    } else {
-        return equal;
+    let i = 1;
+    while (i < numArray.length) {
+        compareTwoValues(number1: numArray[i--], number2: numArray[i]);
+        i++;
     }
+    // for (let i = 1; i < numArray.length; i++) {
+    //     if (numArray[i--] > numArray[i] === true) {
+    //     return lower;
+    // } else if (numArray[i--] < numArray[i] === true) {
+    //     return higher;
+        
+    // } else {
+    //     return equal;
+    // }
 }
+compareTwoValues(numArray[2-1], numArray[2]);
+console.log(result);
 } 
-// function to compare two numbers
+// function to compare two numbers, using Comparison operators to delare Higher/Lower and give them values
 
-function compareTwoValues () {
-        let number1;
-        let number2;
-        // let Higher;
-        // let Lower;
+function compareTwoValues (number1, number2) {
+       
+        let Higher = number1 < number2;
+        let Lower = number1 > number2;
+        let Equal = number1 == number2;
     // for (let i = 1; i < numArray.length; i++) 
        
     
-        if (number1 > number2 === true) {
-        return "Lower";
+        if (Lower === true) {
+        alert(`${number2} is Lower. Game over!`);
+
         } else {
-        if (number1 < number2 === true) {
-        return "Higher";
+        if (Higher === true) {
+        alert(`${number2} is Higher}`);
+        compareTwoValues(number1: numArray[i--], number2: numArray[i]);
     } else {
-        return "Equal";
+        alert("The numbers are the same!Let's continue!!");
+        compareTwoValues(number1: numArray[i--], number2: numArray[i]);
     }
 }
     }
-    console.log('return');
 // compare result (Higher/Lower) to userGuess
 
 
@@ -108,6 +126,7 @@ function randomNumbers () {
 }
 
 // function to allow user guess Higher/Lower
+
 
 // function to check whether user's guess matched hidden number
 
