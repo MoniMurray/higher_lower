@@ -115,7 +115,11 @@ function compareTwoValues (number1, number2) {
     }
 // compare result (Higher/Lower) to userGuess
 
-
+/**if user chooseHigher and number is higher than previous number, 
+ * then jump to next number in iteration and continue game; 
+ * if user chooseHigher and number is higher than previuos number, then game over.
+ * But if user chooseLower and number is lower than previous number, then jump 
+ * to next number in iteration and continue game; if user chooselower and number is higher than previous number, then game over.
 
 function randomNumbers () {
 
