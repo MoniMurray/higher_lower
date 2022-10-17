@@ -42,44 +42,55 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
 
-// function to startGame and reveal numbers
 
 
-    
+  // function to generate numbers
 
  function startGame () {   
 // IF THESE NUMBERS AND numArray WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION - how do I do this?
     let num1 = Math.floor(Math.random()*21);
     
-    document.getElementById("purple-button").innerHTML = num1;
+    // document.getElementById("purple-button").innerHTML = num1;
     let num2 = Math.floor(Math.random()*21);
-    document.getElementById("pink-button").innerHTML = num2;
+    // document.getElementById("pink-button").innerHTML = num2;
     let num3 = Math.floor(Math.random()*21);
-    document.getElementById("yellow-button").innerHTML = num3;
+    // document.getElementById("yellow-button").innerHTML = num3;
     let num4 = Math.floor(Math.random()*21);
-    document.getElementById("blue-button").innerHTML = num4;
+    // document.getElementById("blue-button").innerHTML = num4;
     let num5 = Math.floor(Math.random()*21);
-    document.getElementById("green-button").innerHTML = num5;
+    // document.getElementById("green-button").innerHTML = num5;
     
-    let numArray = [num1, num2, num3, num4, num5];
+    var numArray = [num1, num2, num3, num4, num5];
     console.log(numArray);
+
+    for (let i = 1; i < numArray.length; i++) {
+        if (numArray[i-1] > numArray[i] === true) {
+        return lower;
+    } else if (numArray[i-1] < numArray[i] === true) {
+        return higher;
+        
+    } else {
+        return equal;
+    }
 }
-    
+} 
+// function to compare two numbers
 
 function compareTwoValues () {
-        document.getElementById()
+        let number1;
+        let number2;
         // let Higher;
         // let Lower;
     // for (let i = 1; i < numArray.length; i++) 
-        let i = 1;
+       
     
-        if(numArray[i-1] > numArray[i]) {
-        return Lower;
+        if (number1 > number2 === true) {
+        return "Lower";
         } else {
-        if ((numArray[i-1]) < numArray[i]) {
-        return Higher;
+        if (number1 < number2 === true) {
+        return "Higher";
     } else {
-        return Equal;
+        return "Equal";
     }
 }
     }
