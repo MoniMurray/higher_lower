@@ -41,15 +41,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     })
 
-// User login
+// User login on entering their name to the input field and clicking 'Start'
 
-let userLoggedIn = false;
+let userLoggedIn = true;
 if (userLoggedIn) {
+    if (event.key === "Enter") {
     alert("Welcome, let's play!");
+} else {
+    alert("Please press Enter")
 } else {
     alert("Please log in to play");
 }
-
+}
 
 
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
@@ -89,7 +92,13 @@ if (userLoggedIn) {
 }
 compareTwoValues(numArray[2-1], numArray[2]);
 console.log(result);
-} 
+
+// *.random-numbers is the html class  name of the div containing the 5 buttons for the game into which will go the random numbers in numArray */
+function randomNumbers () {
+
+}
+
+
 // function to compare two numbers, using Comparison operators to delare Higher/Lower and give them values
 
 function compareTwoValues (number1, number2) {
@@ -117,9 +126,11 @@ function compareTwoValues (number1, number2) {
 
 /**if user chooseHigher and number is higher than previous number, 
  * then jump to next number in iteration and continue game; 
- * if user chooseHigher and number is higher than previuos number, then game over.
+ * if user chooseHigher and number is lower than previuos number, then game over.
  * But if user chooseLower and number is lower than previous number, then jump 
  * to next number in iteration and continue game; if user chooselower and number is higher than previous number, then game over.
+ * code for number being tested is higher than previous number = chooseHigher ? jump to next number : game over;
+ * code for number being tested is lower than previous number = chooseLower ? jump to next number : game over;
 
 function randomNumbers () {
 
