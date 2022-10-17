@@ -56,9 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
-// IF THESE NUMBERS AND numArray WERE GLOBAL VARIABLES I COULD ACCESS THEM IN EVERY FUNCTION - how do I do this?
-    let num1 = Math.floor(Math.random()*21);
-    
+// Create 5 random numbers and pass them into the 5 html buttons
+    let num1 = Math.floor(Math.random()*21);    
     document.getElementsByClassName("purple-button")[0].innerHTML = num1;
     let num2 = Math.floor(Math.random()*21);
     document.getElementsByClassName("pink-button")[0].innerHTML = num2;
@@ -70,15 +69,20 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementsByClassName("green-button")[0].innerHTML = num5;
     
     let numArray = [num1, num2, num3, num4, num5];
+    let i = 1;
+    compareTwoValues(numArray[i--], numArray[i]);
+ }
     // return numArray;
-    console.log(numArray);
+    // console.log(numArray);
 
-    // let i = 1;
+    
     // let numArrayLength = numArray.length;
     // while (i < numArrayLength) {
-    //     compareTwoValues(number1: numArray[i--], number2: numArray[i]);
+    //     
     //     i++;
     // }
+    // i = 1 is on purpose, I do understand that the index starts at 0!
+
     // for (let i = 1; i < numArray.length; i++) {
     //     if (numArray[i--] > numArray[i] === true) {
     //     return lower;
@@ -88,27 +92,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // } else {
     //     return equal;
     // }
-    // compareTwoValues(numArray[2-1], numArray[2]);
-    // console.log(result);
-    
-    let buttonArray = [
-        document.getElementById("purple-button"),
-        document.getElementById("pink-button"),
-        document.getElementById("yellow-button"),
-        document.getElementById("blue-button"),
-        document.getElementById("green-button")];
-        
-    
-}
- 
-let numberArray = startGame ()
-
-// *.random-numbers is the html class  name of the div containing the 5 buttons for the game into which will go the random numbers in numArray */
-function randomNumbers () {
-
-}
-
-
+  
+// let numberArray = startGame ()
 // function to compare two numbers, using Comparison operators to delare Higher/Lower and give them values
 
 function compareTwoValues (number1, number2) {
@@ -150,17 +135,25 @@ function compareTwoValues (number1, number2) {
 // function to check whether user's guess matched hidden number
 
 function checkGuess () {
-    let userGuessHigher = document.getElementById("choose-Higher");
-    let userGuessLower = document.getElementById("choose-Lower");
 
-    let revealedAnswer = startGame(numArray[i])
+    let userGuessHigher = document.getElementById("choose-Higher").click;
+    let userGuessLower = document.getElementById("choose-Lower").click;
+    let isCorrect = userGuessHigher === compareTwoValues.Higher ? compareTwoValues () : endGame();
+    
+    if (userGuessHigher && compareTwoValues().Higher) {
+        if (userGuessLower && compareTwoValues.Lower){
+        correctGuessTally();
+    } else if (userGuessHigher && compareTwoValues.lower) {
+        if (userGuessLower && compareTwoValues.higher) {
+        endGame();
+    }
 } 
 
 // function to increment correct guesses - based on the Score area from Love Maths
 
 function correctGuessTally () {
-    let oldScore = parseInt(document.getElementById("tally-Correct")).innertext;
-    document.getElementById("tally-Correct").innertext = ++oldScore;
+    let oldScore = parseInt(document.getElementById("tally-Correct")).innerHTML;
+    document.getElementById("tally-Correct").innerHTML = ++oldScore;
 }
 
 // function to increment incorrect guesses - based on the Score area from Love Maths
@@ -170,7 +163,9 @@ function incorrectGuessTally () {
     document.getElementById("tally-Incorrect").innertext = ++oldScore;
 }
 
-
+function gameOver () {
+    
+}
 
 
 
@@ -197,31 +192,31 @@ function incorrectGuessTally () {
 // }
 
 
-// function drawHeads (xloc, yloc, Red) {
-//     c.beginPath();
-//     c.fillstyle = Red;
-//     c.strokeStyle = "Black" ;
-//     c.linewidth = 5;
-//     c.arc(xloc, yloc, 100, 0, 2 * Math.PI);
-//     c.fill();
-//     c.stroke();
-//     c.closePath();
-//     // draw "?" on Head side
-//     c.fillstyle = "Black"
-//     c.font = "72px Arial";
-//     c.fillText = ("?", xloc, yloc);
-// }
+/*function drawHeads (xloc, yloc, Red) {
+    c.beginPath();
+    c.fillstyle = Red;
+    c.strokeStyle = "Black" ;
+    c.linewidth = 5;
+    c.arc(xloc, yloc, 100, 0, 2 * Math.PI);
+    c.fill();
+    c.stroke();
+    c.closePath();
+    // draw "?" on Head side
+    c.fillstyle = "Black"
+    c.font = "72px Arial";
+    c.fillText = ("?", xloc, yloc);
+}
 
-// function drawTails (xloc, yloc, flip) {
-//     c.beginPath();
-//     c.fillstyle = "red";
-//     c.strokeStyle = "Black" ;
-//     c.linewidth = 5;
-//     c.arc(xloc, yloc, 100, 0, 2 * Math.PI);
-//     c.fill();
-//     c.stroke();
-//     c.closePath();
-//     // insert flip() on Head side
-//     c.fillstyle = "Black"
-//     c.font = "72px Arial";
-//     c.fillText = (flip, xloc, yloc);
+function drawTails (xloc, yloc, flip) {
+    c.beginPath();
+    c.fillstyle = "red";
+    c.strokeStyle = "Black" ;
+    c.linewidth = 5;
+    c.arc(xloc, yloc, 100, 0, 2 * Math.PI);
+    c.fill();
+    c.stroke();
+    c.closePath();
+    // insert flip() on Head side
+    c.fillstyle = "Black"
+    c.font = "72px Arial";
+    c.fillText = (flip, xloc, yloc);*/
