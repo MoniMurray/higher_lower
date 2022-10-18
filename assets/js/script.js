@@ -5,7 +5,7 @@
 
 // Event listener for DOM load and to startGame on button click
 
-document.addEventListener("DOMContentLoaded", function() {
+
 
     // let game = document.getElementsByClassName("game");
     // if (game.style.display === "none") {
@@ -25,37 +25,27 @@ document.addEventListener("DOMContentLoaded", function() {
 // //     }
 // //     })
 // // })
- 
+ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     let gameArea = document.getElementsByTagName("game");
     for (let button of buttons) {
-        button.addEventListener('click', function () {
+        button.addEventListener("click", function () {
 
         if (this.getAttribute("data-type") === "submit") {
             startGame();
             alert("Starting Game");
-        } else {
-            
-// //             if (this.getElementsByClassName("choose-Higher")) {
-
-// //             alert(`Your guess was ${}`);
-// //         } else 
-// //             if (this.getElementsByClassName("choose-Lower")) {
-            
-            alert("Error");
-        }},
-        gameArea.addEventListener('click', function () {
-            
-            if (this.getAttribute("data-type") === "submit") {
-                loadGameArea();
-            }
-        }) )
+        } else
+          alert("Error"); 
+        })
+}
+}) 
+        // )
 
     
 //     // document.getElementById("vote-box").addEventListener("click", compareValue());
 
 
-    }})
+    // }})
 
 // User login on entering their name to the input field and clicking 'Start'
 
@@ -68,13 +58,16 @@ document.addEventListener("DOMContentLoaded", function() {
 // } 
 // }
  
-function loadGameArea () {
+// display: none from https://www.w3schools.com/css/tryit.asp?filename=trycss_display_js
+function loadGameArea (event) {
     let game = document.getElementsByClassName("game");
-    
-    if (game.style.display ==="none") {
-        game.style.display === "block";
+    game.addEventListener("click");
+    if (event.getAttribute("data-type") === "submit") {
+        if (game.style.display = none) {
+        game.style.display = block;
     }     
  }
+}
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
