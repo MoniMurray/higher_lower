@@ -6,20 +6,28 @@
 // Event listener for DOM load and to startGame on button click
 
 document.addEventListener("DOMContentLoaded", function() {
-//    
-//     let playerName = document.getElementsByTagName("input").value;
-//     // let signIn = document.getElementById("start-game").click;
-//     signIn.addEventListener("playerName", function(event){
-//         if (event.key === "Enter") {
-//         alert(`Let's play ${playerName}`);
-//         startGame();
-//     } else {
-//             alert("You must sign in to play");
-//     }
-//     })
-// })
 
+    // let game = document.getElementsByClassName("game");
+    // if (game.style.display === "none") {
+    //     game.style.display === "block";
+    // } else {
+    //     game.style.display ==="none";
+    // }
+// //    
+// //     let playerName = document.getElementsByTagName("input").value;
+// //     // let signIn = document.getElementById("start-game").click;
+// //     signIn.addEventListener("playerName", function(event){
+// //         if (event.key === "Enter") {
+// //         alert(`Let's play ${playerName}`);
+// //         startGame();
+// //     } else {
+// //             alert("You must sign in to play");
+// //     }
+// //     })
+// // })
+ 
     let buttons = document.getElementsByTagName("button");
+    let gameArea = document.getElementsByTagName("game");
     for (let button of buttons) {
         button.addEventListener('click', function () {
 
@@ -27,19 +35,27 @@ document.addEventListener("DOMContentLoaded", function() {
             startGame();
             alert("Starting Game");
         } else {
-//             if (this.getElementsByClassName("choose-Higher")) {
+            
+// //             if (this.getElementsByClassName("choose-Higher")) {
 
-//             alert(`Your guess was ${}`);
-//         } else 
-//             if (this.getElementsByClassName("choose-Lower")) {
+// //             alert(`Your guess was ${}`);
+// //         } else 
+// //             if (this.getElementsByClassName("choose-Lower")) {
             
             alert("Error");
-        }})
-}
-    // document.getElementById("vote-box").addEventListener("click", compareValue());
+        }},
+        gameArea.addEventListener('click', function () {
+            
+            if (this.getAttribute("data-type") === "submit") {
+                loadGameArea();
+            }
+        }) )
+
+    
+//     // document.getElementById("vote-box").addEventListener("click", compareValue());
 
 
-    })
+    }})
 
 // User login on entering their name to the input field and clicking 'Start'
 
@@ -51,8 +67,14 @@ document.addEventListener("DOMContentLoaded", function() {
 //     alert("Please press Enter")
 // } 
 // }
-
-
+ 
+function loadGameArea () {
+    let game = document.getElementsByClassName("game");
+    
+    if (game.style.display ==="none") {
+        game.style.display === "block";
+    }     
+ }
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
@@ -118,6 +140,16 @@ function compareTwoValues (number1, number2) {
     alert (`Game over! Well played!! Your score is ${correctGuessTally()}`)
 }
     }
+
+    function myReveal () {
+        let showHide = document.getElementsByClassName("purple-button")[0];
+        if (showHide.style.display === "none") {
+            showHide.style.display === "block";
+        } else {
+            showHide.style.display === "none"
+        }
+
+    }
 // compare result (Higher/Lower) to userGuess
 
 /*if user chooseHigher and number is higher than previous number, 
@@ -148,7 +180,7 @@ function checkGuess () {
         endGame();
     }
 } 
-
+    }}
 // function to increment correct guesses - based on the Score area from Love Maths
 
 function correctGuessTally () {
@@ -219,4 +251,4 @@ function drawTails (xloc, yloc, flip) {
     // insert flip() on Head side
     c.fillstyle = "Black"
     c.font = "72px Arial";
-    c.fillText = (flip, xloc, yloc);*/
+c.fillText = (flip, xloc, yloc);*/
