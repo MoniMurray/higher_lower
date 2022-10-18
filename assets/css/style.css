@@ -164,16 +164,20 @@ body {
 .pink-button {
     
     border-color: #EE4266;
-    color: #EE4266;
+    color: white;
 }
 
 
-.pink-button:hover, .pink-button:active {
+/* .pink-button:hover, .pink-button:active {
+    background-color: #EE4266;
+    color: white;
+} */
+.pink-button:active {
     background-color: #EE4266;
     color: white;
 }
 
-.yello-button {
+.yellow-button {
     border-color: #FFD23F;
     color: #FFD23F;
 }

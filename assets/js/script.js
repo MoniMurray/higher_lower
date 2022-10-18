@@ -82,29 +82,25 @@ function loadGameArea (event) {
     let num2 = Math.floor(Math.random()*21);
     let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
     pinkButtonNumber.innerHTML = num2;
-    pinkButtonNumber.outerHTML = "?";
 
     let num3 = Math.floor(Math.random()*21);
     let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
     yellowButtonNumber.innerHTML = num3;
-    yellowButtonNumber.outerHTML = "?";
 
     let num4 = Math.floor(Math.random()*21);
     let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
     blueButtonNumber.innerHTML = num4;
-    blueButtonNumber.outerHTML = "?";
 
     let num5 = Math.floor(Math.random()*21);
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
     greenButtonNumber.innerHTML = num5;
-    greenButtonNumber.outerHTML = "?";
     
     let numArray = [num1, num2, num3, num4, num5];
     let i = 1;
     compareTwoValues(numArray[i--], numArray[i]);
 
-    let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
-    gameButtons.innerHTML.style.visibility = "hidden";
+    // let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
+    // gameButtons.innerHTML.style.visibility = "hidden";
  }
     // return numArray;
     // console.log(numArray);
@@ -196,8 +192,8 @@ function checkGuess () {
 // function to increment correct guesses - based on the Score area from Love Maths
 
 function correctGuessTally () {
-    let oldScore = parseInt(document.getElementById("tally-Correct")).innerHTML;
-    document.getElementById("tally-Correct").innerHTML = ++oldScore;
+    let oldScore = parseInt(document.getElementById("tally-Correct")).innertext;
+    document.getElementById("tally-Correct").innertext = ++oldScore;
 }
 
 // function to increment incorrect guesses - based on the Score area from Love Maths
