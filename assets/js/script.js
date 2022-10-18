@@ -72,20 +72,39 @@ function loadGameArea (event) {
 
  function startGame () {   
 // Create 5 random numbers and pass them into the 5 html buttons
+    let toggle = document.getElementsByClassName("game-button");
+   
+    
     let num1 = Math.floor(Math.random()*21);    
-    document.getElementsByClassName("purple-button")[0].innerHTML = num1;
+    let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
+    purpleButtonNumber.innerHTML = num1;
+    
     let num2 = Math.floor(Math.random()*21);
-    document.getElementsByClassName("pink-button")[0].innerHTML = num2;
+    let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
+    pinkButtonNumber.innerHTML = num2;
+    pinkButtonNumber.outerHTML = "?";
+
     let num3 = Math.floor(Math.random()*21);
-    document.getElementsByClassName("yellow-button")[0].innerHTML = num3;
+    let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
+    yellowButtonNumber.innerHTML = num3;
+    yellowButtonNumber.outerHTML = "?";
+
     let num4 = Math.floor(Math.random()*21);
-    document.getElementsByClassName("blue-button")[0].innerHTML = num4;
+    let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
+    blueButtonNumber.innerHTML = num4;
+    blueButtonNumber.outerHTML = "?";
+
     let num5 = Math.floor(Math.random()*21);
-    document.getElementsByClassName("green-button")[0].innerHTML = num5;
+    let greenButtonNumber = document.getElementsByClassName("green-button")[0]
+    greenButtonNumber.innerHTML = num5;
+    greenButtonNumber.outerHTML = "?";
     
     let numArray = [num1, num2, num3, num4, num5];
     let i = 1;
     compareTwoValues(numArray[i--], numArray[i]);
+
+    let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
+    gameButtons.innerHTML.style.visibility = "hidden";
  }
     // return numArray;
     // console.log(numArray);
