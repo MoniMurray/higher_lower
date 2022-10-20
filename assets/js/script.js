@@ -3,6 +3,12 @@
  * previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button. 
  */
 
+// Declare buttons at Global scope
+
+const enterGameButton = document.getElementsByClassName("start-game");
+const chooseHigher = document.getElementById("choose-Higher");
+const chooseLower = document.getElementById("choose-Lower");
+
 // Event listener for DOM load and to startGame on button click
 
 
