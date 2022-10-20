@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest"> -->
+    <script src="assets/jquery-3.6.1.js"></script>
 <link rel="stylesheet" href="assets/css/style.css">
     <title>HIGHER lower - a deductive game of chance!</title>
 </head>
@@ -26,8 +27,8 @@
         
     <!-- A sign-in input box which will load the game when submitted -->
             <div class="sign-in" >
-                <label for="sign-in">Please sign in: </label>
-                <input class="sign-in" type="text" required placeholder="Enter your name here"><br>
+                <label for="player-name">Please sign in: </label>
+                <input id="player-name" type="text" required placeholder="Enter your name here"><br>
                 <button class="start-game" data-type="submit">Enter Game!</button>
             </div>
         <div class="game" onclick="loadGameArea()">

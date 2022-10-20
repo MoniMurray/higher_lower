@@ -12,6 +12,11 @@ const chooseLower = document.getElementById("choose-Lower");
 // Declare signin variable at Global scope
 
 const signInSection = document.getElementsByClassName("sign-in");
+var playerName = document.getElementById("player-name").innerText;
+console.log("this is tex");
+ 
+console.log(playerName);
+playerName = "1";
 
 // Declare game area at Global scope
 
@@ -37,60 +42,62 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
     //     game.style.display ==="none";
     // }
 // //    
-// //     let playerName = document.getElementsByTagName("input").value;
-// //     // let signIn = document.getElementById("start-game").click;
-// //     signIn.addEventListener("playerName", function(event){
-// //         if (event.key === "Enter") {
-// //         alert(`Let's play ${playerName}`);
-// //         startGame();
-// //     } else {
-// //             alert("You must sign in to play");
-// //     }
-// //     })
-// // })
+// //     
  document.addEventListener("DOMContentLoaded", function() {
+    // $(document).ready(function(){
+    //     $(".sign-in").click(function() {
+    //         $(this).hide("slow", startGame()); {
+    //             alert(`Welcome ${playerName}! Let's Play...`);
+    //         };
+    //     });
+    // });
+
     let buttons = document.getElementsByTagName("button");
     let gameArea = document.getElementsByTagName("game");
     for (let button of buttons) {
         button.addEventListener("click", function () {
 
         if (this.getAttribute("data-type") === "submit") {
-            startGame();
-            alert("Starting Game");
+            signIn();
+            // startGame();
+            // alert("Starting Game");
         } else
           alert("Error"); 
-        })
-}
-}) 
-        // )
 
+        })}
+    })
+ 
+      
     
 //     // document.getElementById("vote-box").addEventListener("click", compareValue());
 
 
     // }})
 
-// User login on entering their name to the input field and clicking 'Start'
 
-// let userLoggedIn = true;
-// if (userLoggedIn) {
-//     if (event.key === "Enter") {
-//     alert("Welcome, let's play!");
-// } else {
-//     alert("Please press Enter")
-// } 
-// }
  
 // display: none from https://www.w3schools.com/css/tryit.asp?filename=trycss_display_js
-function loadGameArea (event) {
-    let game = document.getElementsByClassName("game");
-    game.addEventListener("click");
-    if (event.getAttribute("data-type") === "submit") {
-        if (game.style.display = none) {
-        game.style.display = block;
-    }     
- }
-}
+// function loadGameArea (event) {
+//     let game = document.getElementsByClassName("game");
+//     game.addEventListener("click");
+//     if (event.getAttribute("data-type") === "submit") {
+//         if (game.style.display = none) {
+//         game.style.display = block;
+//     }     
+//  }
+// }
+
+// function to sign in a player - User login on entering their name to the input field and clicking 'Start'
+
+function signIn (){
+    console.log(playerName);
+    if (playerName !== "") {
+       alert (`Welcome ${playerName}`);
+       startGame();
+   } else 
+        alert ("You must log in to play this game");
+    }
+   
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
