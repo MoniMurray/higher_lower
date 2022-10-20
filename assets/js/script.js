@@ -3,11 +3,28 @@
  * previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button. 
  */
 
-// Declare buttons at Global scope
+// Declare clickable buttons at Global scope
 
 const enterGameButton = document.getElementsByClassName("start-game");
 const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
+
+// Declare signin variable at Global scope
+
+const signInSection = document.getElementsByClassName("sign-in");
+
+// Declare game area at Global scope
+
+const gameSection = document.getElementsByClassName("game");
+
+// Declare what I need to compare i-- to i
+
+
+// Declare Tally section and variables at Global scope
+
+const tallySection = document.getElementsByClassName("tally");
+const tallyCorrect = document.getElementById("tally-correct");
+const tallyIncorrect = document.getElementById("tally-incorrect");
 
 // Event listener for DOM load and to startGame on button click
 
@@ -77,7 +94,7 @@ function loadGameArea (event) {
   // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
-// Create 5 random numbers and pass them into the 5 html buttons
+// Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assinging random to coloured buttons before submitting.
     let toggle = document.getElementsByClassName("game-button");
    
     
