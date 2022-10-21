@@ -29,23 +29,36 @@ var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
 
-function compareNums (){
+// function higher () {
+//     numArray = [num1, num2, num3, num4, num5];
+//     let i = 1;
+//     for (let i = 1; i < numArray.length; i++) {
+//         if (numArray[i--] < numArray[i]) {
+//             return Higher;
+//         }
+//     }
+// }
+/*The function compareNums() works, so if trialling 
+*function higher () and function lower () doesn't work, put it back!!
+*/
+
+function compareNums (Higher, Lower, Equal){
     numArray = [num1, num2, num3, num4, num5];
 var Higher = numArray[i--] < numArray[i];
 var Lower = numArray[i--] > numArray[i];
 var Equal = numArray[i--] == numArray[i];
 let i = 1;
 for (let i = 1; i < numArray.length; i++) {
-   if (numArray[i--] < numArray[i]) {
+   if (numArray[i--] < numArray[i] === Higher) {
     //means the number being guessed is Higher, so the 'Higher' button choice would be correct
-        Higher;
+        
    } else {
-    if (numArray[i--] > numArray[i]) {
+    if (numArray[i--] > numArray[i] === Lower) {
         // means the number being guessed is Lower, so the 'Lower' button choice would be correct
-        Lower;
+        
     } else {
-        if (numArray[i--] > numArray[i]) {
-        Equal;   
+        if (numArray[i--] > numArray[i] === Equal) {
+           
         }
     }
    }
@@ -82,7 +95,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
             // startGame();
             // alert("Starting Game");
         } else if (userGuess) {
-            // user has clicked on Higher or Lower button so compare user section to compare numbers
+            // user has clicked on Higher or Lower button so compare user selection to compare numbers
             alert("boo");
             checkGuess();
         } else {
@@ -229,17 +242,27 @@ function checkGuess () {
 
     let userGuessHigher = document.getElementById("choose-Higher").click;
     let userGuessLower = document.getElementById("choose-Lower").click;
-    let isCorrect = userGuessHigher === compareTwoValues.Higher ? compareTwoValues () : endGame();
+    // let isCorrectGuess;
     
-    if (userGuessHigher && compareTwoValues().Higher) {
-        if (userGuessLower && compareTwoValues.Lower){
+    // userGuessHigher === compareNums(Higher);
+    
+    // if (isCorrect) {
+    //     alert("You're right!");
+    // } else 
+    //     alert("You're wrong :( ");
+    // }
+//         ? compareTwoValues () : endGame();
+    
+    if (userGuessHigher && compareNums(Higher)) {
+        if (userGuessLower && compareNums(Lower)){
         correctGuessTally();
-    } else if (userGuessHigher && compareTwoValues.lower) {
-        if (userGuessLower && compareTwoValues.higher) {
-        endGame();
+    } else if (userGuessHigher && compareNums(Lower)) {
+        if (userGuessLower && compareNums(Higher)) {
+        gameOver();
     }
 } 
     }}
+
 // function to increment correct guesses - based on the Score area from Love Maths
 
 function correctGuessTally () {
@@ -255,7 +278,9 @@ function incorrectGuessTally () {
 }
 
 function gameOver () {
-    
+    playerName = document.getElementById("name").value;
+    alert(`Goodbye ${playerName}`);
+   
 }
 
 
