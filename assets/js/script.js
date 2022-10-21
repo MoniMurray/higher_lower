@@ -27,14 +27,28 @@ var num4;
 var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
+
+function compareNums (){
+    numArray = [num1, num2, num3, num4, num5];
+var Higher = numArray[i--] < numArray[i];
+var Lower = numArray[i--] > numArray[i];
+var Equal = numArray[i--] == numArray[i];
+let i = 1;
 for (let i = 1; i < numArray.length; i++) {
-//    if (numArray[i--] < numArray[i]) {
-//     //means the number being guessed is Higher, so the 'Higher' button choice would be correct
-//    } else {
-//     if (numArray[i--] > numArray[i]) {
-//         // means the number being guessed is Lower, so the 'Lower' button choice would be correct
-//     }
-//    }
+   if (numArray[i--] < numArray[i]) {
+    //means the number being guessed is Higher, so the 'Higher' button choice would be correct
+        Higher;
+   } else {
+    if (numArray[i--] > numArray[i]) {
+        // means the number being guessed is Lower, so the 'Lower' button choice would be correct
+        Lower;
+    } else {
+        if (numArray[i--] > numArray[i]) {
+        Equal;   
+        }
+    }
+   }
+}
 }
 
 
@@ -68,7 +82,9 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
         } else
           alert("Error"); 
 
-        })}
+        })
+        
+    }
     })
  
     
@@ -111,20 +127,19 @@ function signIn (){
         $(".sign-in").click(function() {
             $(this).hide("slow");
         });
-            $(".game").show(startGame());
+            $(".game").toggle(startGame());
         });
     } else 
         alert ("You must log in to play this game");
        
-    //    startGame();
-   } 
+    } 
    
    
     // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
 // Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
-    let toggle = document.getElementsByClassName("game-button");
+    // let toggle = document.getElementsByClassName("game-button");
    
     
     num1 = Math.floor(Math.random()*21);    
@@ -147,58 +162,38 @@ function signIn (){
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
     greenButtonNumber.innerHTML = num5;
     
-    let numArray = [num1, num2, num3, num4, num5];
-    let i = 1;
-    compareTwoValues(numArray[i--], numArray[i]);
+    numArray = [num1, num2, num3, num4, num5];
+    // let i = 1;
+    // compareTwoValues(numArray[i--], numArray[i]);
 
     // let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
     // gameButtons.innerHTML.style.visibility = "hidden";
  }
- 
-
-    
-    // let numArrayLength = numArray.length;
-    // while (i < numArrayLength) {
-    //     
-    //     i++;
-    // }
-    // i = 1 is on purpose, I do understand that the index starts at 0!
-
-    // for (let i = 1; i < numArray.length; i++) {
-    //     if (numArray[i--] > numArray[i] === true) {
-    //     return lower;
-    // } else if (numArray[i--] < numArray[i] === true) {
-    //     return higher;
-        
-    // } else {
-    //     return equal;
-    // }
-  
-
-// function to compare two numbers, using Comparison operators to delare Higher/Lower and give them values
-
-function compareTwoValues (number1, number2) {
        
-        let Higher = number1 < number2;
-        let Lower = number1 > number2;
-        let Equal = number1 == number2;
-    // for (let i = 1; i < numArray.length; i++) 
+// function to compare two numbers, using Comparison operators to declare Higher/Lower and give them values
+
+// function compareTwoValues (number1, number2) {
+       
+//         let Higher = number1 < number2;
+//         let Lower = number1 > number2;
+//         let Equal = number1 == number2;
+//     // for (let i = 1; i < numArray.length; i++) 
        
     
-        if (Lower === true) {
-        alert(`${number2} is Lower. Game over!`);
+//         if (Lower === true) {
+//         alert(`${number2} is Lower. Game over!`);
 
-        } else {
-        if (Higher === true) {
-        alert(`${number2} is Higher}`);
-        // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
-    } else {
-        alert("The numbers are the same!Let's continue!!");
-        // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
-    }
-    alert (`Game over! Well played!! Your score is ${correctGuessTally()}`)
-}
-    }
+//         } else {
+//         if (Higher === true) {
+//         alert(`${number2} is Higher}`);
+//         // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
+//     } else {
+//         alert("The numbers are the same!Let's continue!!");
+//         // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
+//     }
+//     alert (`Game over! Well played!! Your score is ${correctGuessTally()}`)
+// }
+//     }
 
     function myReveal () {
         let showHide = document.getElementsByClassName("purple-button")[0];
