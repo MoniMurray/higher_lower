@@ -6,8 +6,9 @@
 // Declare clickable buttons at Global scope
 
 const enterGameButton = document.getElementsByClassName("start-game");
-const chooseHigher = document.getElementById("choose-Higher");
-const chooseLower = document.getElementById("choose-Lower");
+const chooseHigher = document.getElementById("choose-Higher").click;
+const chooseLower = document.getElementById("choose-Lower").click;
+var userGuess = chooseHigher || chooseLower;
 
 // Declare signin variable at Global scope
 
@@ -79,13 +80,15 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
             signIn();
             // startGame();
             // alert("Starting Game");
-        } else
-          alert("Error"); 
-
-        })
-        
-    }
-    })
+        } else if ("click" === userGuess) {
+            // user has clicked on Higher or Lower button so compare user section to compare numbers
+            checkGuess();
+        } else {
+            alert("Error"); 
+        }
+    })}
+});
+    
  
     
 
@@ -195,15 +198,15 @@ function signIn (){
 // }
 //     }
 
-    function myReveal () {
-        let showHide = document.getElementsByClassName("purple-button")[0];
-        if (showHide.style.display === "none") {
-            showHide.style.display === "block";
-        } else {
-            showHide.style.display === "none"
-        }
+    // function myReveal () {
+    //     let showHide = document.getElementsByClassName("purple-button")[0];
+    //     if (showHide.style.display === "none") {
+    //         showHide.style.display === "block";
+    //     } else {
+    //         showHide.style.display === "none"
+    //     }
 
-    }
+    // }
 // compare result (Higher/Lower) to userGuess
 
 /*if user chooseHigher and number is higher than previous number, 
