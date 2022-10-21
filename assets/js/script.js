@@ -13,10 +13,6 @@ const chooseLower = document.getElementById("choose-Lower");
 
 const signInSection = document.getElementsByClassName("sign-in");
 var playerName = document.getElementById("name").value;
-console.log(typeof playerName);
- 
-console.log(playerName);
-// playerName = "1";
 
 // Declare game area at Global scope
 
@@ -61,7 +57,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
     // });
 
     let buttons = document.getElementsByTagName("button");
-    let gameArea = document.getElementsByTagName("game");
+    // let gameArea = document.getElementsByTagName("game");
     for (let button of buttons) {
         button.addEventListener("click", function () {
 
@@ -111,10 +107,18 @@ function signIn (){
     console.log(playerName);
     if (playerName !== "") {
        alert (`Welcome ${playerName}`);
-       startGame();
-   } else 
+       $(document).ready(function(){
+        $(".sign-in").click(function() {
+            $(this).hide("slow");
+        });
+            $(".game").show(startGame());
+        });
+    } else 
         alert ("You must log in to play this game");
-    }
+       
+    //    startGame();
+   } 
+   
    
     // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
