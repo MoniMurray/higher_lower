@@ -6,8 +6,8 @@
 // Declare clickable buttons at Global scope
 
 const enterGameButton = document.getElementsByClassName("start-game");
-const chooseHigher = document.getElementById("choose-Higher").click;
-const chooseLower = document.getElementById("choose-Lower").click;
+const chooseHigher = document.getElementById("choose-Higher");
+const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
 
 // Declare signin variable at Global scope
@@ -72,6 +72,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
     // });
 
     let buttons = document.getElementsByTagName("button");
+    userGuess = chooseHigher || chooseLower;
     // let gameArea = document.getElementsByTagName("game");
     for (let button of buttons) {
         button.addEventListener("click", function () {
@@ -80,8 +81,9 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
             signIn();
             // startGame();
             // alert("Starting Game");
-        } else if ("click" === userGuess) {
+        } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user section to compare numbers
+            alert("boo");
             checkGuess();
         } else {
             alert("Error"); 
