@@ -13,16 +13,16 @@ const chooseLower = document.getElementById("choose-Lower");
 
 const signInSection = document.getElementsByClassName("sign-in");
 var playerName = document.getElementById("name").value;
-console.log("this is text");
+console.log(typeof playerName);
  
 console.log(playerName);
-playerName = "1";
+// playerName = "1";
 
 // Declare game area at Global scope
 
 const gameSection = document.getElementsByClassName("game");
 
-// Declare what I need to compare i-- to i
+// Declare nums to use as parameters in functions and what I need to compare i-- to i
 
 var num1;
 var num2;
@@ -31,6 +31,15 @@ var num4;
 var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
+for (let i = 1; i < numArray.length; i++) {
+//    if (numArray[i--] < numArray[i]) {
+//     //means the number being guessed is Higher, so the 'Higher' button choice would be correct
+//    } else {
+//     if (numArray[i--] > numArray[i]) {
+//         // means the number being guessed is Lower, so the 'Lower' button choice would be correct
+//     }
+//    }
+}
 
 
 // Declare Tally section and variables at Global scope
@@ -41,16 +50,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 
 // Event listener for DOM load and to startGame on button click
 
-
-
-    // let game = document.getElementsByClassName("game");
-    // if (game.style.display === "none") {
-    //     game.style.display === "block";
-    // } else {
-    //     game.style.display ==="none";
-    // }
-// //    
-// //     
+    
  document.addEventListener("DOMContentLoaded", function() {
     // $(document).ready(function(){
     //     $(".sign-in").click(function() {
@@ -75,7 +75,16 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
         })}
     })
  
-      
+    
+
+    // let game = document.getElementsByClassName("game");
+    // if (game.style.display === "none") {
+    //     game.style.display === "block";
+    // } else {
+    //     game.style.display ==="none";
+    // }
+// //    
+// //   
     
 //     // document.getElementById("vote-box").addEventListener("click", compareValue());
 
@@ -98,6 +107,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start'
 
 function signIn (){
+    playerName = document.getElementById("name").value;
     console.log(playerName);
     if (playerName !== "") {
        alert (`Welcome ${playerName}`);
@@ -106,30 +116,30 @@ function signIn (){
         alert ("You must log in to play this game");
     }
    
-  // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
+    // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
  function startGame () {   
-// Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assinging random to coloured buttons before submitting.
+// Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
     let toggle = document.getElementsByClassName("game-button");
    
     
-    let num1 = Math.floor(Math.random()*21);    
+    num1 = Math.floor(Math.random()*21);    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;
     
-    let num2 = Math.floor(Math.random()*21);
+    num2 = Math.floor(Math.random()*21);
     let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
     pinkButtonNumber.innerHTML = num2;
 
-    let num3 = Math.floor(Math.random()*21);
+    num3 = Math.floor(Math.random()*21);
     let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
     yellowButtonNumber.innerHTML = num3;
 
-    let num4 = Math.floor(Math.random()*21);
+    num4 = Math.floor(Math.random()*21);
     let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
     blueButtonNumber.innerHTML = num4;
 
-    let num5 = Math.floor(Math.random()*21);
+    num5 = Math.floor(Math.random()*21);
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
     greenButtonNumber.innerHTML = num5;
     
@@ -140,8 +150,7 @@ function signIn (){
     // let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
     // gameButtons.innerHTML.style.visibility = "hidden";
  }
-    // return numArray;
-    // console.log(numArray);
+ 
 
     
     // let numArrayLength = numArray.length;
@@ -161,7 +170,7 @@ function signIn (){
     //     return equal;
     // }
   
-// let numberArray = startGame ()
+
 // function to compare two numbers, using Comparison operators to delare Higher/Lower and give them values
 
 function compareTwoValues (number1, number2) {
