@@ -12,8 +12,8 @@ const chooseLower = document.getElementById("choose-Lower");
 // Declare signin variable at Global scope
 
 const signInSection = document.getElementsByClassName("sign-in");
-var playerName = document.getElementById("player-name").innerText;
-console.log("this is tex");
+var playerName = document.getElementById("name").value;
+console.log("this is text");
  
 console.log(playerName);
 playerName = "1";
@@ -23,6 +23,14 @@ playerName = "1";
 const gameSection = document.getElementsByClassName("game");
 
 // Declare what I need to compare i-- to i
+
+var num1;
+var num2;
+var num3;
+var num4;
+var num5;
+
+var numArray = [num1, num2, num3, num4, num5];
 
 
 // Declare Tally section and variables at Global scope
