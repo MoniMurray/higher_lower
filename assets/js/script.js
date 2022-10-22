@@ -231,8 +231,8 @@ function incorrectGuessTally () {
 
 function gameOver () {
     playerName = document.getElementById("name").value;
-    alert(`Goodbye ${playerName}`);
-   
+    alert(`Goodbye ${playerName}. Thanks for playing`);
+           
 }
 
 
