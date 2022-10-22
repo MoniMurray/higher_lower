@@ -24,8 +24,8 @@ body {
     box-sizing: border-box;
     height: 80%;
     width: 80%;
-    max-height: 950px;
-    max-width: 850px;
+    max-height: 90rem;
+    max-width: 80rem;
     margin: 10px auto;
     padding: 1%;
     background-color: silver;
@@ -78,6 +78,7 @@ body {
     padding: .5em 0;
 
 }
+
 /* Similar in principle to 'answer-box' in LM */
 .vote-box {
 
@@ -87,7 +88,7 @@ body {
     height: auto;
     /* width: 7em; */
     font-size: 1.2rem;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 #choose-Higher {

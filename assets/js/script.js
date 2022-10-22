@@ -29,8 +29,7 @@ var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
 console.log(numArray);
-// const gameButton = document.getElementsByClassName("game-button");
-// console.log(gameButton);
+
 
 let currentIndex = 0;
 
@@ -61,7 +60,6 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
             // alert("Starting Game");
         } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user selection to compare numbers
-            // alert("boo");
             checkGuess(this.id);
             myReveal();
         } else {
@@ -79,11 +77,6 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
     // } else {
     //     game.style.display ==="none";
     // }
-// //    
-// //   
-    
-//     // document.getElementById("vote-box").addEventListener("click", compareValue());
-
 
     // }})
 
@@ -119,13 +112,11 @@ function signIn (){
     } 
    
    
-    // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
+    // function to generate numbers.  
 
  function startGame (gameButton) {   
 // Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
-       
-    // hide content of .game-button until user guesses Higher/Lower
-  
+        
     num1 = Math.floor(Math.random()*21) +1;    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;
@@ -206,7 +197,9 @@ function incorrectGuessTally () {
 function gameOver () {
     playerName = document.getElementById("name").value;
     alert(`Goodbye ${playerName}. Thanks for playing`);
-    throw `Game Over!`;          
+    throw `Game Over!`; 
+    clear();
+
 }
 
 
