@@ -34,7 +34,19 @@ var numArray = [num1, num2, num3, num4, num5];
 //     let i = 1;
 //     for (let i = 1; i < numArray.length; i++) {
 //         if (numArray[i--] < numArray[i]) {
-//             return Higher;
+//             let result = higher;
+//                 return result;
+//         } 
+//     }
+// }
+
+// function lower () {
+//     numArray = [num1, num2, num3, num4, num5];
+//     let i = 1;
+//     for (let i = 1; i < numArray.length; i++) {
+//         if (numArray[i--] > numArray[i]) {
+//             let result = lower;
+//                 return result;
 //         }
 //     }
 // }
@@ -42,28 +54,28 @@ var numArray = [num1, num2, num3, num4, num5];
 *function higher () and function lower () doesn't work, put it back!!
 */
 
-function compareNums (Higher, Lower, Equal){
-    numArray = [num1, num2, num3, num4, num5];
-var Higher = numArray[i--] < numArray[i];
-var Lower = numArray[i--] > numArray[i];
-var Equal = numArray[i--] == numArray[i];
-let i = 1;
-for (let i = 1; i < numArray.length; i++) {
-   if (numArray[i--] < numArray[i] === Higher) {
-    //means the number being guessed is Higher, so the 'Higher' button choice would be correct
+// function compareNums (Higher, Lower, Equal){
+//     numArray = [num1, num2, num3, num4, num5];
+// var Higher = numArray[i--] < numArray[i];
+// var Lower = numArray[i--] > numArray[i];
+// var Equal = numArray[i--] == numArray[i];
+// let i = 1;
+// for (let i = 1; i < numArray.length; i++) {
+//    if (numArray[i--] < numArray[i] === Higher) {
+//     //means the number being guessed is Higher, so the 'Higher' button choice would be correct
         
-   } else {
-    if (numArray[i--] > numArray[i] === Lower) {
-        // means the number being guessed is Lower, so the 'Lower' button choice would be correct
+//    } else {
+//     if (numArray[i--] > numArray[i] === Lower) {
+//         // means the number being guessed is Lower, so the 'Lower' button choice would be correct
         
-    } else {
-        if (numArray[i--] > numArray[i] === Equal) {
+//     } else {
+//         if (numArray[i--] > numArray[i] === Equal) {
            
-        }
-    }
-   }
-}
-}
+//         }
+//     }
+//    }
+// }
+// }
 
 
 // Declare Tally section and variables at Global scope
@@ -97,7 +109,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
         } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user selection to compare numbers
             alert("boo");
-            checkGuess();
+            checkGuess(this.id);
         } else {
             alert("Error"); 
         }
@@ -232,16 +244,37 @@ function signIn (){
  * code for number being tested is higher than previous number = chooseHigher ? jump to next number : game over;
  * code for number being tested is lower than previous number = chooseLower ? jump to next number : game over;*/
 
+let currentIndex = 0;
 
+// function for game to loop to next number guess
+function nextNumber () {
+    currentIndex++;
+}
 // function to allow user guess Higher/Lower
 
 
 // function to check whether user's guess matched hidden number
 
-function checkGuess () {
+function checkGuess (id) {
 
-    let userGuessHigher = document.getElementById("choose-Higher").click;
-    let userGuessLower = document.getElementById("choose-Lower").click;
+    const newRandomNumber = Math.floor(Math.random()* 21);
+    
+    const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
+    console.log(num2);
+
+    if (
+        isHigher && id === 'choose-Higher' ||
+        !isHigher && id === 'choose-Lower'
+    ) {
+        true;
+        alert("Wizard!! You guessed correctly.");
+        correctGuessTally();
+    } else {
+        false;
+        alert("Wrong :( ");
+        gameOver();
+    }  
+}  
     // let isCorrectGuess;
     
     // userGuessHigher === compareNums(Higher);
@@ -253,28 +286,32 @@ function checkGuess () {
     // }
 //         ? compareTwoValues () : endGame();
     
-    if (userGuessHigher && compareNums(Higher)) {
-        if (userGuessLower && compareNums(Lower)){
-        correctGuessTally();
-    } else if (userGuessHigher && compareNums(Lower)) {
-        if (userGuessLower && compareNums(Higher)) {
-        gameOver();
-    }
-} 
-    }}
+//     if (userGuessHigher && higher()) {
+//         if (userGuessLower && lower()){
+//         let result = true;
+//         alert("Correct!!")
+//         correctGuessTally();
+        
+//     } else if (userGuessHigher && lower()) {
+//         if (userGuessLower && higher()) {
+//         alert("Wrong!!")
+//         let result = false;
+//     }
+// } 
+//     }}
 
 // function to increment correct guesses - based on the Score area from Love Maths
 
 function correctGuessTally () {
-    let oldScore = parseInt(document.getElementById("tally-Correct")).innertext;
-    document.getElementById("tally-Correct").innertext = ++oldScore;
+    let oldScore = parseInt(document.getElementById("tally-correct").innerText);
+    document.getElementById("tally-correct").innerText = ++oldScore;
 }
 
 // function to increment incorrect guesses - based on the Score area from Love Maths
 
 function incorrectGuessTally () {
-    let oldScore = parseInt(document.getElementById("tally-Incorrect")).innertext;
-    document.getElementById("tally-Incorrect").innertext = ++oldScore;
+    let oldScore = parseInt(document.getElementById("tally-incorrect").innerText);
+    document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
 function gameOver () {
