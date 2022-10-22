@@ -55,7 +55,7 @@ body {
 }
 
 .directions, .sign-in {
-    display: inline-block;
+    display: justify;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2rem;
     color: #3a3a3a

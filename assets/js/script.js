@@ -134,23 +134,23 @@ function signIn (){
    
     // hide content of .game-button until user guesses Higher/Lower
   
-    num1 = Math.floor(Math.random()*21);    
+    num1 = Math.floor(Math.random()*21) +1;    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;
           
-    num2 = Math.floor(Math.random()*21);
+    num2 = Math.floor(Math.random()*21) +1;
     let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
     pinkButtonNumber = num2;
 
-    num3 = Math.floor(Math.random()*21);
+    num3 = Math.floor(Math.random()*21) +1;
     let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
     yellowButtonNumber = num3;
 
-    num4 = Math.floor(Math.random()*21);
+    num4 = Math.floor(Math.random()*21) +1;
     let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
     blueButtonNumber = num4;
 
-    num5 = Math.floor(Math.random()*21);
+    num5 = Math.floor(Math.random()*21) +1;
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
     // greenButtonNumber.innerHTML = num5;
     greenButtonNumber = num5;
@@ -232,6 +232,7 @@ function incorrectGuessTally () {
 function gameOver () {
     playerName = document.getElementById("name").value;
     alert(`Goodbye ${playerName}. Thanks for playing`);
+    throw `Game Over!`;
            
 }
 
