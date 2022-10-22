@@ -1,6 +1,7 @@
 
 /**Game is to generate 5 random numbers between 1-20, user must guess whether each consecutive number is Higher or Lower than the 
- * previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button. 
+ * previous number.  The number will be kept hidden from the user until they select either the Higher/Lower button. The game 
+ * will continue until either all 5 numbers have been correctly guessed, or an incorrect guess ends the game.
  */
 
 // Declare clickable buttons at Global scope
