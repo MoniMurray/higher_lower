@@ -28,54 +28,14 @@ var num4;
 var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
+console.log(numArray);
+// const gameButton = document.getElementsByClassName("game-button");
+// console.log(gameButton);
 
-// function higher () {
-//     numArray = [num1, num2, num3, num4, num5];
-//     let i = 1;
-//     for (let i = 1; i < numArray.length; i++) {
-//         if (numArray[i--] < numArray[i]) {
-//             let result = higher;
-//                 return result;
-//         } 
-//     }
-// }
+let currentIndex = 0;
 
-// function lower () {
-//     numArray = [num1, num2, num3, num4, num5];
-//     let i = 1;
-//     for (let i = 1; i < numArray.length; i++) {
-//         if (numArray[i--] > numArray[i]) {
-//             let result = lower;
-//                 return result;
-//         }
-//     }
-// }
-/*The function compareNums() works, so if trialling 
-*function higher () and function lower () doesn't work, put it back!!
-*/
 
-// function compareNums (Higher, Lower, Equal){
-//     numArray = [num1, num2, num3, num4, num5];
-// var Higher = numArray[i--] < numArray[i];
-// var Lower = numArray[i--] > numArray[i];
-// var Equal = numArray[i--] == numArray[i];
-// let i = 1;
-// for (let i = 1; i < numArray.length; i++) {
-//    if (numArray[i--] < numArray[i] === Higher) {
-//     //means the number being guessed is Higher, so the 'Higher' button choice would be correct
-        
-//    } else {
-//     if (numArray[i--] > numArray[i] === Lower) {
-//         // means the number being guessed is Lower, so the 'Lower' button choice would be correct
-        
-//     } else {
-//         if (numArray[i--] > numArray[i] === Equal) {
-           
-//         }
-//     }
-//    }
-// }
-// }
+
 
 
 // Declare Tally section and variables at Global scope
@@ -108,8 +68,9 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
             // alert("Starting Game");
         } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user selection to compare numbers
-            alert("boo");
+            // alert("boo");
             checkGuess(this.id);
+            myReveal();
         } else {
             alert("Error"); 
         }
@@ -167,101 +128,75 @@ function signIn (){
    
     // function to generate numbers.  The return of startGame is numArray?!?!?!?!?! is this correct?
 
- function startGame () {   
+ function startGame (gameButton) {   
 // Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
     // let toggle = document.getElementsByClassName("game-button");
    
-    
+    // hide content of .game-button until user guesses Higher/Lower
+  
     num1 = Math.floor(Math.random()*21);    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;
-    
+          
     num2 = Math.floor(Math.random()*21);
     let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
-    pinkButtonNumber.innerHTML = num2;
+    pinkButtonNumber = num2;
 
     num3 = Math.floor(Math.random()*21);
     let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
-    yellowButtonNumber.innerHTML = num3;
+    yellowButtonNumber = num3;
 
     num4 = Math.floor(Math.random()*21);
     let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
-    blueButtonNumber.innerHTML = num4;
+    blueButtonNumber = num4;
 
     num5 = Math.floor(Math.random()*21);
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
-    greenButtonNumber.innerHTML = num5;
+    // greenButtonNumber.innerHTML = num5;
+    greenButtonNumber = num5;
     
     numArray = [num1, num2, num3, num4, num5];
-    // let i = 1;
-    // compareTwoValues(numArray[i--], numArray[i]);
+    console.log(numArray);
+   
+    // gameButton = document.getElementsByClassName("game-button").innerHTML;
 
-    // let gameButtons = [purpleButtonNumber, pinkButtonNumber, yellowButtonNumber, blueButtonNumber, greenButtonNumber];
-    // gameButtons.innerHTML.style.visibility = "hidden";
+    
  }
        
-// function to compare two numbers, using Comparison operators to declare Higher/Lower and give them values
+function myReveal () {
+        
+       const gameButton = document.getElementsByClassName("game-button")[currentIndex];
+       console.log(gameButton);
+        gameButton.innerHTML = numArray[currentIndex];
+        
+}
+       
+        
+        // let showHide = document.getElementsByClassName("purple-button")[0];
+        // if (showHide.style.display === "none") {
+        //     showHide.style.display === "block";
+        // } else {
+        //     showHide.style.display === "none"
+        // }
 
-// function compareTwoValues (number1, number2) {
-       
-//         let Higher = number1 < number2;
-//         let Lower = number1 > number2;
-//         let Equal = number1 == number2;
-//     // for (let i = 1; i < numArray.length; i++) 
-       
     
-//         if (Lower === true) {
-//         alert(`${number2} is Lower. Game over!`);
+// compare result (Higher/Lower) to user's Guess
 
-//         } else {
-//         if (Higher === true) {
-//         alert(`${number2} is Higher}`);
-//         // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
-//     } else {
-//         alert("The numbers are the same!Let's continue!!");
-//         // compareTwoValues(number1: numArray[i--], number2: numArray[i]);
-//     }
-//     alert (`Game over! Well played!! Your score is ${correctGuessTally()}`)
-// }
-//     }
 
-    // function myReveal () {
-    //     let showHide = document.getElementsByClassName("purple-button")[0];
-    //     if (showHide.style.display === "none") {
-    //         showHide.style.display === "block";
-    //     } else {
-    //         showHide.style.display === "none"
-    //     }
-
-    // }
-// compare result (Higher/Lower) to userGuess
-
-/*if user chooseHigher and number is higher than previous number, 
- * then jump to next number in iteration and continue game; 
- * if user chooseHigher and number is lower than previuos number, then game over.
- * But if user chooseLower and number is lower than previous number, then jump 
- * to next number in iteration and continue game; if user chooselower and number is higher than previous number, then game over.
- * code for number being tested is higher than previous number = chooseHigher ? jump to next number : game over;
- * code for number being tested is lower than previous number = chooseLower ? jump to next number : game over;*/
-
-let currentIndex = 0;
 
 // function for game to loop to next number guess
 function nextNumber () {
-    currentIndex++;
-    
+   currentIndex++;
+ 
 }
-// function to allow user guess Higher/Lower
-
 
 // function to check whether user's guess matched hidden number
 
 function checkGuess (id) {
 
-    const newRandomNumber = Math.floor(Math.random()* 21);
-    
+    // const newRandomNumber = Math.floor(Math.random()* 21);
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
-    console.log(currentIndex++);
+    console.log(currentIndex+1);
 
     if (
         isHigher && id === 'choose-Higher' ||
@@ -270,13 +205,14 @@ function checkGuess (id) {
         true;
         alert("Wizard!! You guessed correctly.");
         // $(this).toggle(); number currently hide() should show() on guess
+        
         correctGuessTally();
         nextNumber();
     } else {
         false;
         alert("Wrong :( ");
         gameOver();
-    }  
+    } 
 }  
 
 // function to increment correct guesses - based on the Score area from Love Maths
