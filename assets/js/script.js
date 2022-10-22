@@ -154,8 +154,9 @@ function myReveal () {
 // function for game to loop to next number guess
 function nextNumber () {
    currentIndex++;
- 
-}
+
+ }
+
 
 // function to check whether user's guess matched hidden number
 
@@ -194,11 +195,15 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
+function youWin () {
+
+}
+
 function gameOver () {
     playerName = document.getElementById("name").value;
     alert(`Goodbye ${playerName}. Thanks for playing`);
     throw `Game Over!`; 
-    clear();
+    // clear();
 
 }
 
