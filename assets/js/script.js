@@ -249,6 +249,7 @@ let currentIndex = 0;
 // function for game to loop to next number guess
 function nextNumber () {
     currentIndex++;
+    
 }
 // function to allow user guess Higher/Lower
 
@@ -260,7 +261,7 @@ function checkGuess (id) {
     const newRandomNumber = Math.floor(Math.random()* 21);
     
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
-    console.log(num2);
+    console.log(currentIndex++);
 
     if (
         isHigher && id === 'choose-Higher' ||
@@ -268,37 +269,15 @@ function checkGuess (id) {
     ) {
         true;
         alert("Wizard!! You guessed correctly.");
+        // $(this).toggle(); number currently hide() should show() on guess
         correctGuessTally();
+        nextNumber();
     } else {
         false;
         alert("Wrong :( ");
         gameOver();
     }  
 }  
-    // let isCorrectGuess;
-    
-    // userGuessHigher === compareNums(Higher);
-    
-    // if (isCorrect) {
-    //     alert("You're right!");
-    // } else 
-    //     alert("You're wrong :( ");
-    // }
-//         ? compareTwoValues () : endGame();
-    
-//     if (userGuessHigher && higher()) {
-//         if (userGuessLower && lower()){
-//         let result = true;
-//         alert("Correct!!")
-//         correctGuessTally();
-        
-//     } else if (userGuessHigher && lower()) {
-//         if (userGuessLower && higher()) {
-//         alert("Wrong!!")
-//         let result = false;
-//     }
-// } 
-//     }}
 
 // function to increment correct guesses - based on the Score area from Love Maths
 
