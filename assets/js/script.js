@@ -48,14 +48,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 
     
  document.addEventListener("DOMContentLoaded", function() {
-    // $(document).ready(function(){
-    //     $(".sign-in").click(function() {
-    //         $(this).hide("slow", startGame()); {
-    //             alert(`Welcome ${playerName}! Let's Play...`);
-    //         };
-    //     });
-    // });
-
+   
     let buttons = document.getElementsByTagName("button");
     userGuess = chooseHigher || chooseLower;
     // let gameArea = document.getElementsByTagName("game");
@@ -116,11 +109,11 @@ function signIn (){
        alert (`Welcome ${playerName}`);
        $(document).ready(function(){
         $(".sign-in").click(function() {
-            $(this).hide("slow");
+            $(this).hide("slow", startGame());
         });
-            $(".game").toggle(startGame());
+            $(".game").show(startGame());
         });
-    } else 
+        } else 
         alert ("You must log in to play this game");
        
     } 
@@ -130,8 +123,7 @@ function signIn (){
 
  function startGame (gameButton) {   
 // Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
-    // let toggle = document.getElementsByClassName("game-button");
-   
+       
     // hide content of .game-button until user guesses Higher/Lower
   
     num1 = Math.floor(Math.random()*21) +1;    
@@ -152,15 +144,12 @@ function signIn (){
 
     num5 = Math.floor(Math.random()*21) +1;
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
-    // greenButtonNumber.innerHTML = num5;
     greenButtonNumber = num5;
     
     numArray = [num1, num2, num3, num4, num5];
     console.log(numArray);
    
-    // gameButton = document.getElementsByClassName("game-button").innerHTML;
-
-    
+    // gameButton = document.getElementsByClassName("game-button").innerHTML;  
  }
        
 function myReveal () {
@@ -170,20 +159,7 @@ function myReveal () {
         gameButton.innerHTML = numArray[currentIndex];
         
 }
-       
-        
-        // let showHide = document.getElementsByClassName("purple-button")[0];
-        // if (showHide.style.display === "none") {
-        //     showHide.style.display === "block";
-        // } else {
-        //     showHide.style.display === "none"
-        // }
-
     
-// compare result (Higher/Lower) to user's Guess
-
-
-
 // function for game to loop to next number guess
 function nextNumber () {
    currentIndex++;
@@ -203,14 +179,12 @@ function checkGuess (id) {
         !isHigher && id === 'choose-Lower'
     ) {
         true;
-        alert("Wizard!! You guessed correctly.");
-        // $(this).toggle(); number currently hide() should show() on guess
-        
+        alert("Wizard!! You guessed correctly.");      
         correctGuessTally();
         nextNumber();
     } else {
         false;
-        alert("Wrong :( ");
+        alert("Wrong guess, sorry :( ");
         gameOver();
     } 
 }  
@@ -232,8 +206,7 @@ function incorrectGuessTally () {
 function gameOver () {
     playerName = document.getElementById("name").value;
     alert(`Goodbye ${playerName}. Thanks for playing`);
-    throw `Game Over!`;
-           
+    throw `Game Over!`;          
 }
 
 

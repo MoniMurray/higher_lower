@@ -29,18 +29,19 @@
             <div class="sign-in" >
                 <label for="name">Please sign in: </label>
                 <input id="name" type="text" name="username" value="" required="" placeholder="Enter your name here"><br>
-                <button class="start-game" data-type="submit">Enter Game!</button>
+                <button class="start-game hide" data-type="submit">Enter Game!</button>
                 
                 <div class="directions">
-                    <h1 >Directions:</h1>
-                    <p><b>How to Play:</b> The computer will generate 5 random numbers between 1-20. <br>
+                    <h1 >Directions</h1>
+                    <p><b>How to Play:</b><br>The computer will generate 5 random numbers between 1-20,
+                        and display the first number to you. <br>
                         Will the next number will be higher or lower than the previous number?<br>
-                        The number will be revealed when you make your guess and click either 'Higher' or 'Lower'!<br>
+                        You must guess!<br>The number will be revealed when you guess and click on either<br><em>'Higher' or 'Lower'.</em> <br>
                         Ready to play?<br>
-                        Sign in above, and click on 'Enter Game'!</p>
+                        Enter your username above, and then click on 'Enter Game' to begin!</p>
             </div>
             </div>
-        <div class="game">
+        <div class="game show">
             <div class="random-numbers">
                 <button class="button big-button game-button purple-button" type="button" value="button">?</button>
                 <button class="button big-button game-button pink-button" type="button" value="button">?</button>
@@ -62,6 +63,7 @@
         <p class="tally"> Correct <span id="tally-correct">0</span> Incorrect <span id="tally-incorrect">0</span></p>
 
     </div>
+    <div class="game-over">Game Over!</div>
 <!-- optional if I have time
     <div class="timer">Against the clock!</div> -->
 
