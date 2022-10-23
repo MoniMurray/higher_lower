@@ -69,31 +69,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
         }
     })}
 });
-    
- 
-    
-
-    // let game = document.getElementsByClassName("game");
-    // if (game.style.display === "none") {
-    //     game.style.display === "block";
-    // } else {
-    //     game.style.display ==="none";
-    // }
-
-    // }})
-
-
- 
-// display: none from https://www.w3schools.com/css/tryit.asp?filename=trycss_display_js
-// function loadGameArea (event) {
-//     let game = document.getElementsByClassName("game");
-//     game.addEventListener("click");
-//     if (event.getAttribute("data-type") === "submit") {
-//         if (game.style.display = none) {
-//         game.style.display = block;
-//     }     
-//  }
-// }
+   
 
 // functions to toggle between hide and show of sections
 
@@ -121,7 +97,7 @@ function signIn (){
        alert (`Welcome ${playerName}`);
        hide();
        show();
-     
+    startGame();
      } else 
         alert ("You must log in to play this game");
        
@@ -132,7 +108,8 @@ function signIn (){
 
  function startGame (gameButton) {   
 // Create 5 random numbers and pass them into the 5 html buttons. 
-        
+    remove ();
+
     num1 = Math.floor(Math.random()*21) +1;    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;

@@ -5,7 +5,6 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #3a3a3a;
     text-align: center;
-
 }
 
 .heading {
@@ -18,7 +17,7 @@ body {
     padding: auto;
 }
 
-/* style the area the game will be contained within */
+/* style the area the sign-in and game will be contained within */
 
 .game-area {
     box-sizing: border-box;
@@ -31,9 +30,9 @@ body {
     background-color: silver;
 }
 
-.sign-in::after, .start-game::after {
+/* .sign-in::after, .start-game::after {
     display: none;
-}
+} */
 .game {
     margin-top: 4em;
 }
@@ -69,13 +68,14 @@ body {
     font-size: 1.2rem;
     color: #3a3a3a
 }
+
 .directions {
     border: 1px solid hsl(0, 62%, 69%);
     width: 70%;
     margin: .75em auto;
     padding: .5em 0;
-
 }
+
 /* from Love Maths */
 .random-numbers {
     border: 1px solid hsl(0, 62%, 69%);
@@ -83,21 +83,19 @@ body {
     font-size: 2em;
     margin: .75em auto;
     padding: .5em 0;
-
 }
 
 /* Similar in principle to 'answer-box' in LM */
 .vote-box {
-
     border: none;
     color: #3a3a3a;
     display: inline-block;
     height: auto;
-    /* width: 7em; */
     font-size: 1.2rem;
     padding-top: 2%;
 }
 
+/* style the voting buttons */
 #choose-Higher {
     border-color: hsl(0, 62%, 69%);
     color: #3a3a3a;
@@ -152,7 +150,7 @@ body {
     color: #3a3a3a;
 }
 
-/* turn the buttons into circles */
+/* turn the square buttons into circles */
 
 .big-button {
     background-color: white;
@@ -172,12 +170,6 @@ body {
     color: white;
 }
 
-/* in testing (add to README.md) hover would not work.  This is because (w3schools tells me) :active must come after :hover,. */
-/* .purple-button:hover, .purple-button:active {
-    background-color: #540D6E;
-    color: white;
-} */
-
 .pink-button {
     
     border-color: #EE4266;
@@ -185,27 +177,11 @@ body {
     color: white;
 }
 
-
-/* .pink-button:hover, .pink-button:active {
-    background-color: #EE4266;
-    color: white;
-} */
-/* .pink-button:active {
-    background-color: #EE4266;
-    color: white;
-} */
-
 .yellow-button {
     border-color: #FFD23F;
     background-color: #FFD23F;
     color: white;
 }
-
-
-/* .yellow-button:hover, .yellow-button:active {
-    background-color: #FFD23F;
-    color: white;
-} */
 
 .blue-button {
     border-color: #3BCEAC;
@@ -213,22 +189,11 @@ body {
     color: white;
 }
 
-
-/* .blue-button:hover, .blue-button:active {
-    background-color: #3BCEAC;
-    color: white;
-} */
-
 .green-button {
     border-color: #0EAD69;
     background-color: #0EAD69;
     color: white;
 }
-
-/* .green-button:hover, .green-button:active {
-    background-color: #0EAD69;
-    color: white;
-} */
 
 .game-over {
     display: none;
@@ -253,10 +218,10 @@ body {
             
     }
 }
-
-/* Trying out Canvas */
-#myCanvas {
+/* 
+Trying out Canvas */
+/* #myCanvas {
     width: 600px;
     height: 400px;
     border: 1px solid;
-}
+} */
