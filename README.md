@@ -128,6 +128,14 @@ I relied on 'googling' many of my 'how to...' questions.  Google results varied 
 
 jquery https://www.w3schools.com/jquery/default.asp
 
+resolving error in if/else nested conditional statement https://www.w3schools.com/js/js_if_else.asp
+
+resolving show/hide issue with sign-in area and game area https://www.w3schools.com/howto/howto_js_add_class.asp
+
+#### CI course content
+
+When I couldn't quite remember how to do something taught in the course content, I reviewed it.
+
 
 
 

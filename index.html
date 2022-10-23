@@ -26,10 +26,10 @@
     <div class="game-area">
         
     <!-- A sign-in input box which will load the game when submitted -->
-            <div class="sign-in" >
+            <div id="load-signin" class="sign-in" >
                 <label for="name">Please sign in: </label>
                 <input id="name" type="text" name="username" value="" required pattern="[a-zA-Z0-9!@#$%^*_|]{4,8}" size="15" placeholder="Enter your name here"><br>
-                <button class="start-game hide" data-type="submit">Enter Game</button>
+                <button class="start-game" data-type="submit">Enter Game</button>
                 
                 <div class="directions">
                     <h1 >Directions</h1>
@@ -41,7 +41,7 @@
                         Enter your username above, and then click on 'Enter Game' to begin!</p>
             </div>
             </div>
-        <div class="game show">
+        <div id="load-game" class="game hide">
             <div class="random-numbers">
                 <button class="button big-button game-button purple-button" type="button" value="button">?</button>
                 <button class="button big-button game-button pink-button" type="button" value="button">?</button>

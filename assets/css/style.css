@@ -35,8 +35,12 @@ body {
     display: none;
 }
 
-.game {
+.hide {
     display: none;
+}
+
+.show {
+    display: flex;
 }
 
 .start-game {

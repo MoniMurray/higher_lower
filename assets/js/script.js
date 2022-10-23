@@ -57,6 +57,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 
         if (this.getAttribute("data-type") === "submit") {
             signIn();
+            
             // startGame();
             // alert("Starting Game");
         } else if (userGuess) {
@@ -94,21 +95,34 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 //  }
 // }
 
-// function to sign in a player - User login on entering their name to the input field and clicking 'Start'
 
+function show () {
+    var element = document.getElementById("load-game");
+    element.classList.add("show");
+  }
+
+function hide () {
+    var element = document.getElementById("load-signin");
+    element.classList.add("hide");
+}
+
+// function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
     playerName = document.getElementById("name").value;
     console.log(playerName);
     if (playerName !== "") {
        alert (`Welcome ${playerName}`);
-       $(document).ready(function(){
-        $(".sign-in").click(function() {
-            $(this).hide("slow", startGame());
-        });
-            $(".game").show(startGame());
-        });
-        } else 
+       hide();
+       show();
+    //    $(document).ready(function(){
+    //     $(".sign-in").click(function() {
+    //         $(this).hide("slow", startGame());
+    //     });
+    //         $(".game").show(startGame());
+    //     });
+    
+     } else 
         alert ("You must log in to play this game");
        
     } 
@@ -117,7 +131,7 @@ function signIn (){
     // function to generate numbers.  
 
  function startGame (gameButton) {   
-// Create 5 random numbers and pass them into the 5 html buttons.  Tidy up assigning random to coloured buttons before submitting.
+// Create 5 random numbers and pass them into the 5 html buttons. 
         
     num1 = Math.floor(Math.random()*21) +1;    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
@@ -144,7 +158,7 @@ function signIn (){
    
     // gameButton = document.getElementsByClassName("game-button").innerHTML;  
  }
-       
+    //    event listener for either the Higher or Lower button to be clicked, indicating user has made a choice and the current hidden number is to be revealed.
 function myReveal () {
         
        const gameButton = document.getElementsByClassName("game-button")[currentIndex];
@@ -156,15 +170,17 @@ function myReveal () {
 // function for game to loop to next number guess
 function nextNumber () {
    currentIndex++;
-
- }
+//    do {
+//     currentIndex++;
+//    }
+//    while (currentIndex < numArray.length);
+}
 
 
 // function to check whether user's guess matched hidden number
 
 function checkGuess (id) {
 
-    // const newRandomNumber = Math.floor(Math.random()* 21);
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
     console.log(currentIndex+1);
 
@@ -198,14 +214,24 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
-function youWin () {
+// function youWin () {
 
-}
-
+// }
+// function endGame () {
+//     while (currentIndex < numArray.length) {
+//         nextNumber();
+//     }
+// }
 function gameOver () {
     playerName = document.getElementById("name").value;
-    alert(`Goodbye ${playerName}. Thanks for playing`);
-    throw `Game Over!`; 
-    // clear();
+    // do {
+    //     nextNumber();
+    // }
+    //     while (currentIndex < numArray.length);
+    // }
+    // alert(`Goodbye ${playerName}. Thanks for playing`);
+    // throw `Game Over!`; 
+    // // clear();
 
 }
+
