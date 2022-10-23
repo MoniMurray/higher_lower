@@ -128,6 +128,31 @@ I relied on 'googling' many of my 'how to...' questions.  Google results varied 
 
 jquery https://www.w3schools.com/jquery/default.asp
 
+
+
+
+In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+
+You can break the credits section up into Content and Media, depending on what you have included in your project.
+
+## Content
+
+## Technologies used
+
+This site was designed with HTML5, styled with CSS and made responsive using JavaScript and a little jQuery.
+
+## Frameworks, Libraries & Programs
+
+Website logo designed using Favicon https://favicon.io/
+
+Wireframe sketched on Balsamiq Wireframes.
+
+Site designed and deployed on Gitpod and Github.
+
+**JQuery used for toggling on and off sections of the game as needed.**
+
+## Acknowledgements
+
 #### Mentor Support
 
 Jubril rocks!!!  Enough said.
@@ -139,17 +164,4 @@ from here: https://releases.jquery.com/
 
 #### Slack
 
-The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit and kindness during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
-
-
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-
-You can break the credits section up into Content and Media, depending on what you have included in your project.
-
-## Content
-The text for the Home page was taken from Wikipedia Article A
-Instructions on how to implement form validation on the Sign Up page was taken from Specific YouTube Tutorial
-The icons in the footer were taken from Font Awesome
-Media
-
-https://favicon.io/
+The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit in the group, and kindness shown by people during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
