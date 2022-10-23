@@ -77,6 +77,11 @@ Test that user is prompted to input a username before starting the game.  Click 
 
 ## Validator Testing
 
+### Lighthouse
+
+Lighthouse passed
+
+[lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
 ### HTML
 No errors were returned when passing through the official W3C validator
 ### CSS
