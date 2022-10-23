@@ -161,26 +161,28 @@ body {
 
 .purple-button {
     border-color: #540D6E;
-    color: #540D6Eed;
-}
-
-/* in testing (add to README.md) hover would not work.  This is because (w3schools tells me) :active must come after :hover,. */
-.purple-button:hover, .purple-button:active {
     background-color: #540D6E;
     color: white;
 }
 
+/* in testing (add to README.md) hover would not work.  This is because (w3schools tells me) :active must come after :hover,. */
+/* .purple-button:hover, .purple-button:active {
+    background-color: #540D6E;
+    color: white;
+} */
+
 .pink-button {
     
     border-color: #EE4266;
-    color: #EE4266;
-}
-
-
-.pink-button:hover, .pink-button:active {
     background-color: #EE4266;
     color: white;
 }
+
+
+/* .pink-button:hover, .pink-button:active {
+    background-color: #EE4266;
+    color: white;
+} */
 /* .pink-button:active {
     background-color: #EE4266;
     color: white;
@@ -188,35 +190,38 @@ body {
 
 .yellow-button {
     border-color: #FFD23F;
-    color: #FFD23F;
-}
-
-
-.yellow-button:hover, .yellow-button:active {
     background-color: #FFD23F;
     color: white;
 }
 
+
+/* .yellow-button:hover, .yellow-button:active {
+    background-color: #FFD23F;
+    color: white;
+} */
+
 .blue-button {
     border-color: #3BCEAC;
-    color: #3BCEAC;
-}
-
-
-.blue-button:hover, .blue-button:active {
     background-color: #3BCEAC;
     color: white;
 }
 
+
+/* .blue-button:hover, .blue-button:active {
+    background-color: #3BCEAC;
+    color: white;
+} */
+
 .green-button {
     border-color: #0EAD69;
-    color: #0EAD69;
-}
-
-.green-button:hover, .green-button:active {
     background-color: #0EAD69;
     color: white;
 }
+
+/* .green-button:hover, .green-button:active {
+    background-color: #0EAD69;
+    color: white;
+} */
 
 .game-over {
     display: none;
