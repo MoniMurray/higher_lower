@@ -28,7 +28,7 @@
     <!-- A sign-in input box which will load the game when submitted -->
             <div class="sign-in" >
                 <label for="name">Please sign in: </label>
-                <input id="name" type="text" name="username" value="" required="" placeholder="Enter your name here"><br>
+                <input id="name" type="text" name="username" value="" required pattern="[a-zA-Z0-9!@#$%^*_|]{4,8}" size="15" placeholder="Enter your name here"><br>
                 <button class="start-game hide" data-type="submit">Enter Game!</button>
                 
                 <div class="directions">

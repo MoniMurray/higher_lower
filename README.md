@@ -1,14 +1,15 @@
-Help from Tutor Alex for jquery not working: <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-I got it from here: https://releases.jquery.com/
 
 
-# 'Higher Lower' - A Game of Chance!
+
+# HIGHER lower - A Game of Chance!
 
 Higher Lower is an interactive, fully responsive game of chance.
 
 The game will generate 5 random numbers between 1-20.  A user must sign-in to play the game.  The user is welcomed, and the first number of 5 is displayed.  The user must guess whether each consecutive number is Higher or Lower than the previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button to guess the outcome of that number. The game will continue until either all 5 numbers have been correctly guessed, or an incorrect guess ends the game.
 
 The user's score is counted and the Correct Answer score is displayed under the game area.
+
+**note - to do**
 [insert screenshot of deployed project here from http://amiresponsivedesign.is/website]
 ## Features
 [include screenshots of each feature]
@@ -37,9 +38,17 @@ Once the user has entered a username into the text box, they must then click on 
 
 !['Enter Game' button screenshot](assets/images/README-images/enter-game-hover.png)
 
+The graphics of the 'Enter Game' button are consistent in style and colour with the game's icon for optimum user experience.
+
+The user is then welcomed by name.
+
+![welcome message screenshot](assets/images/README-images/welcome-message.png)
+
 #### The Game Area
 
 This section will be displayed to the user upon successfully signing in.
+
+![Game area screenshot](assets/images/README-images/game-area.png)
 
 The user will be able to easily see five button icons displayed.  The first button icon displays the first number of the game.  The other four button icons display only a question mark.  The user will see two submit buttons below the five button icons, 'Higher' and 'Lower'.  The user selects either of these submit buttons to enter their guess and progress through the game.
 
@@ -105,6 +114,9 @@ jquery https://www.w3schools.com/jquery/default.asp
 
 
 CI Tutor support
+
+Guidance from Tutor Alex fix a problem with jquery.  It was not working because I downloaded jquery instead of including the following link: <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+from here: https://releases.jquery.com/
 
 Slack
 

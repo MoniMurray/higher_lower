@@ -44,7 +44,7 @@ body {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 3px solid #540D6E;
+    border: 3px solid hsl(0, 62%, 69%);
     background-color: hsl(0, 62%, 69%);
     color: #2a2a2a;
     font-size: 2rem;
@@ -52,8 +52,8 @@ body {
 }
 
 .start-game:hover, .start-game:active {
-    background-color: #540D6E;
-    color: silver;
+    background-color: #2a2a2a;
+    color: hsl(0, 62%, 69%);
 }
 
 .directions, .sign-in {
