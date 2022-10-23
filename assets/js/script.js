@@ -107,6 +107,11 @@ function hide () {
     element.classList.add("hide");
 }
 
+function remove (){
+    var element = document.getElementById("load-game");
+    element.classList.remove("hide");
+}
+
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
