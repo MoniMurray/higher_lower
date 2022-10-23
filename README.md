@@ -89,7 +89,7 @@ Lighthouse passed
 
 ![lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
 ### HTML
-No errors were returned when passing through the official W3C validator
+No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fmonimurray.github.io%2Fhigher_lower%2F).
 
 ![W3C HTML Validator screenshot](assets/images/README-images/w3html-validator-screenshot.png)
 
@@ -107,7 +107,7 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 
 ## Deployment
 
-The site was deployed to GitHub pages.
+The site was deployed to [GitHub pages](https://pages.github.com/).
 
 The steps to deploy are as follows:
 
@@ -123,23 +123,19 @@ This walkthrough project gave me alot of ideas, both for appearance of my game t
 
 Stackoverflow
 
-#### Google
+#### [Google](https://www.google.com/)
 
-I relied on 'googling' many of my 'how to...' questions.  Google results varied between W3Schools, on which I relied alot, StackOverflow and YouTube videos.
+I relied on 'googling' many of my 'how to...' questions.  Google results varied between [W3Schools](https://www.w3schools.com/), on which I relied alot, [StackOverflow](https://stackoverflow.com/) and [YouTube](https://www.youtube.com/) videos.
 
-#### W3Schools
+#### [W3Schools](https://www.w3schools.com/)
 
-jquery https://www.w3schools.com/jquery/default.asp
+I trialled using [JQuery](https://www.w3schools.com/jquery/default.asp) in this project to toggle images on and off on a mouse click, but in the end judged that using CSS was simpler and more effective.  I used [this](https://www.w3schools.com/howto/howto_js_remove_class.asp) link to learn how to add a styled class to the elements I wanted to show/hide.
 
-resolving error in if/else nested conditional statement https://www.w3schools.com/js/js_if_else.asp
-
-resolving show/hide issue with sign-in area and game area https://www.w3schools.com/howto/howto_js_add_class.asp
+[This](https://www.w3schools.com/js/js_if_else.asp) link helped me in resolving an error in if/else nested conditional statement, which was a missing semicolon in the middle of the code.
 
 #### CI course content
 
-When I couldn't quite remember how to do something taught in the course content, I reviewed it.
-
-
+When I couldn't quite remember how to do something taught in the course content, I reviewed it on the [LMS](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)!
 
 
 In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
@@ -160,8 +156,6 @@ Wireframe sketched on Balsamiq Wireframes.
 
 Site designed and deployed on Gitpod and Github.
 
-**JQuery used for toggling on and off sections of the game as needed.**
-
 ## Acknowledgements
 
 #### Mentor Support
@@ -175,4 +169,4 @@ from here: https://releases.jquery.com/
 
 #### Slack
 
-The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit in the group, and kindness shown by people during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
+The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit in this group, and the kindness shown by people during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
