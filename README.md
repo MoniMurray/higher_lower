@@ -74,6 +74,12 @@ Test that user is prompted to input a username before starting the game.  Click 
 
 ![log-in prompt](assets/images/README-images/log-in-prompt.png)
 
+### Bugs
+
+The text input box revealed on testing that spacebar-only keypress would be accepted as a username.
+
+**FIX this?**
+
 
 ## Validator Testing
 
@@ -98,16 +104,19 @@ You will need to mention unfixed bugs and why they were not fixed. This section 
 
 ## Deployment
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
+The site was deployed to GitHub pages.
 
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, select the Master Branch
-Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here - 
+The steps to deploy are as follows:
+
+In the GitHub repository, navigate to the Settings tab; From the Code and Automation area on the left side of the page, select Pages; From the source section drop-down menu, select the Master Branch, select Save; The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. Once again navigate to the Settings tab, and then to Pages where the live link can now be found.
+
+The following is a live link to the site - https://monimurray.github.io/higher_lower/
 
 ## Credits
 
-CI Love Maths
+#### CI Love Maths
+
+This walkthrough project gave me alot of ideas, both for appearance of my game through CSS and most particularly how to use JavaScript for the incrementing of user's scores throughout the game.
 
 Stackoverflow
 
