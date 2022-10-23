@@ -87,9 +87,12 @@ The text input box revealed on testing that spacebar-only keypress would be acce
 
 Lighthouse passed
 
-[lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
+![lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
 ### HTML
 No errors were returned when passing through the official W3C validator
+
+![W3C HTML Validator screenshot](assets/images/README-images/w3html-validator-screenshot.png)
+
 ### CSS
 No errors were found when passing through the official (Jigsaw) validator
 ### JavaScript
