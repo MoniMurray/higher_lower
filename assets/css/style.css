@@ -63,7 +63,7 @@ body {
     color: #3a3a3a
 }
 .directions {
-    border: 1px solid;
+    border: 1px solid hsl(0, 62%, 69%);
     width: 70%;
     margin: .75em auto;
     padding: .5em 0;
@@ -71,7 +71,7 @@ body {
 }
 /* from Love Maths */
 .random-numbers {
-    border: 1px solid;
+    border: 1px solid hsl(0, 62%, 69%);
     width: 70%;
     font-size: 2em;
     margin: .75em auto;
@@ -92,7 +92,7 @@ body {
 }
 
 #choose-Higher {
-    border-color: #3a3a3a;
+    border-color: hsl(0, 62%, 69%);
     color: #3a3a3a;
     font-size: 2rem;
 }
@@ -103,7 +103,7 @@ body {
 }
 
 #choose-Lower {
-    border-color: #3a3a3a;
+    border-color: hsl(0, 62%, 69%);
     color: #3a3a3a;
     font-size: 2rem;
 }
