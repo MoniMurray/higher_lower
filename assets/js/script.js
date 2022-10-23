@@ -95,6 +95,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 //  }
 // }
 
+// functions to toggle between hide and show of sections
 
 function show () {
     var element = document.getElementById("load-game");
@@ -115,13 +116,7 @@ function signIn (){
        alert (`Welcome ${playerName}`);
        hide();
        show();
-    //    $(document).ready(function(){
-    //     $(".sign-in").click(function() {
-    //         $(this).hide("slow", startGame());
-    //     });
-    //         $(".game").show(startGame());
-    //     });
-    
+     
      } else 
         alert ("You must log in to play this game");
        

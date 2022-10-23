@@ -34,13 +34,16 @@ body {
 .sign-in::after, .start-game::after {
     display: none;
 }
+.game {
+    margin-top: 4em;
+}
 
 .hide {
     display: none;
 }
 
 .show {
-    display: flex;
+    display: block
 }
 
 .start-game {
