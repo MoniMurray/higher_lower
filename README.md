@@ -120,19 +120,26 @@ This walkthrough project gave me alot of ideas, both for appearance of my game t
 
 Stackoverflow
 
-Google
+#### Google
 
-W3Schools
+I relied on 'googling' many of my 'how to...' questions.  Google results varied between W3Schools, on which I relied alot, StackOverflow and YouTube videos.
+
+#### W3Schools
 
 jquery https://www.w3schools.com/jquery/default.asp
 
+#### Mentor Support
 
-CI Tutor support
+Jubril rocks!!!  Enough said.
 
-Guidance from Tutor Alex fix a problem with jquery.  It was not working because I downloaded jquery instead of including the following link: <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+#### CI Tutor support
+
+Guidance from Tutor Support was invaluable during the JavaScript section of this project.  Tutor Alex helped me source and resolve a problem with jquery.  It was not working because I downloaded jquery instead of including the following link: <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
 from here: https://releases.jquery.com/
 
-Slack
+#### Slack
+
+The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit and kindness during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
 
 
 In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
