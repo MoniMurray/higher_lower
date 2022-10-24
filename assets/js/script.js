@@ -80,6 +80,11 @@ function remove (){
     element.classList.remove("hide");
 }
 
+function logInAlert () {
+    var element = document.getElementById("log-in");
+    element.classList.add("show");
+}
+
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
@@ -91,8 +96,8 @@ function signIn (){
        show();
     startGame();
      } else 
-        alert ("You must log in to play this game");
-       
+        // alert ("You must log in to play this game");
+       logInAlert();
     } 
     
 // function to generate random numbers.  
