@@ -61,7 +61,7 @@
         </div>
       </div>
       <div id="load-game" class="game hide">
-        <h1>
+        <h1 id="game-instruction">
           Guess will the next number be<br />
           <em>Higher</em> or <em>Lower</em><br />
           than the previous number
@@ -120,22 +120,28 @@
               Lower
             </button></span
           >
+          <h1 id="game-end" class="hide">Game Over! Well played!!</h1>
         </div>
       </div>
     </div>
-<div class="messages hide" >
-    <p id="log-alert" class="hide">You must log in to play!</p>
-    <p id="welcome" class="hide">`Welcome ${playername}`</p>
-</div>
+
+    <div class="messages hide">
+      <p id="log-alert" class="hide">You must log in to play!</p>
+      <p id="welcome" class="hide">`Welcome ${playername}`</p>
+    </div>
+
     <div class="increment-scores">
-      <p > Question <span id="answer-count">0</span>/4</p>
+      <p>Question <span id="answer-count">0</span>/4</p>
       <p class="tally">
         Correct <span id="tally-correct">0</span> Incorrect
         <span id="tally-incorrect">0</span>
       </p>
     </div>
-    <div class="game-over hide">Game Over!</div>
-   
+
+    <div class="game-over hide">
+        <h1>Game Over!</h1>
+    </div>
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

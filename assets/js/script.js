@@ -20,6 +20,8 @@ var playerName = document.getElementById("name").value;
 // Declare game area at Global scope
 
 const gameSection = document.getElementsByClassName("game");
+const gameInstruction = document.getElementById("game-instruction");
+const gameEnd = document.getElementById("game-end");
 
 // Declare nums and numArray to use in functions and what I need to compare i+1 to i
 
@@ -146,33 +148,7 @@ function myReveal () {
 function nextNumber () {
 
     currentIndex++;
-
-    // for (let currentIndex = 0; currentIndex < numArray.length; currentIndex++) {
-    //     if (currentIndex <= numArray.length){
-    //         currentIndex++;
-    //     } else 
-    //     {
-    //         gameOver();
-    //     }
-    //         }
-
    }
-//    gameOver();
-
-
-//    while (currentIndex < numArray.length) {
-//     console.log(currentIndex);
-    // currentIndex++;
-// }
-   
-//    do {
-//     currentIndex++;
-//    }
-//    while (numArray[currentIndex+1] < numArray.length);
-
-
-//     myReveal(currentIndex);
-
 
 // function to check whether user's guess matched hidden number
 function checkGuess (id) {
@@ -183,14 +159,12 @@ function checkGuess (id) {
 
 // let ansCount =  parseInt(answerCount.innerText);
     if(ansCount === 4) {
-        alert("Game over");
-            
-            console.log("cant click :(")
-            // gameOver();
+                   
             chooseHigher.classList.add("hide");
             chooseLower.classList.add("hide");
-            //   chooseHigher.style.display = "none"
-            //   chooseLower.style.display = "none"
+            gameInstruction.classList.add("hide");
+            gameEnd.classList.add("show");
+            // gameOver();
       
     }else{
     //  answerCount.innerText = ++ansCount;
