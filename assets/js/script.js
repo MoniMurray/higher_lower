@@ -156,18 +156,15 @@ function checkGuess (id) {
     let ansCount = parseInt(document.getElementById("answer-count").innerText);
     document.getElementById("answer-count").innerText = ++ansCount;
 
-
-// let ansCount =  parseInt(answerCount.innerText);
     if(ansCount === 4) {
                    
             chooseHigher.classList.add("hide");
             chooseLower.classList.add("hide");
             gameInstruction.classList.add("hide");
             gameEnd.classList.add("show");
-            // gameOver();
+            gameOver();
       
-    }else{
-    //  answerCount.innerText = ++ansCount;
+    } else {
     ++ansCount;
 
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
