@@ -10,6 +10,7 @@ const enterGameButton = document.getElementsByClassName("start-game");
 const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
+const answerCount = document.getElementById("answer-count");
 
 // Declare signin variable at Global scope
 
@@ -125,33 +126,67 @@ function signIn (){
   
  }
 
+
  //    event listener for either the Higher or Lower button to be clicked, indicating user has made a choice and the current hidden number is to be revealed.
 function myReveal () {
         
        const gameButton = document.getElementsByClassName("game-button")[currentIndex];
        console.log(gameButton);
         gameButton.innerHTML = numArray[currentIndex];
+        console.log(numArray[currentIndex]);
       
 }
     
 // function for game to loop to next number guess
 function nextNumber () {
-   currentIndex++;
-   
-   do {
+
     currentIndex++;
+
+    // for (let currentIndex = 0; currentIndex < numArray.length; currentIndex++) {
+    //     if (currentIndex <= numArray.length){
+    //         currentIndex++;
+    //     } else 
+    //     {
+    //         gameOver();
+    //     }
+    //         }
+
    }
-   while (currentIndex < numArray.length);
-   gameOver();
-}
+//    gameOver();
+
+
+//    while (currentIndex < numArray.length) {
+//     console.log(currentIndex);
+    // currentIndex++;
+// }
+   
+//    do {
+//     currentIndex++;
+//    }
+//    while (numArray[currentIndex+1] < numArray.length);
+
+
+//     myReveal(currentIndex);
 
 
 // function to check whether user's guess matched hidden number
 function checkGuess (id) {
-
+let ansCount =   parseInt(answerCount.innerText);
+    if(ansCount == 4) {
+        alert("Game over");
+            
+            console.log("cant click :(")
+            // gameOver();
+            chooseHigher.classList.add("hide");
+            chooseLower.classList.add("hide");
+            //   chooseHigher.style.display = "none"
+            //   chooseLower.style.display = "none"
+      
+    }else{
+     answerCount.innerText = ++ansCount;
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
-    console.log(currentIndex+1);
-
+      
+   
     if (
         isHigher && id === 'choose-Higher' ||
         !isHigher && id === 'choose-Lower'
@@ -160,13 +195,28 @@ function checkGuess (id) {
         alert("Wizard!! You guessed correctly.");      
         correctGuessTally();
         nextNumber();
+        console.log(currentIndex);
     } else {
         false;
         alert("Wrong guess, sorry :( ");
         incorrectGuessTally();
         nextNumber();
-    } 
-}  
+        console.log(currentIndex);
+    }  
+    
+}
+}      
+    
+    // for (let currentIndex = 0; currentIndex < numArray.length; currentIndex++) {
+    //     if (currentIndex <= numArray.length){
+    //         currentIndex++;
+    //     } else 
+    //     {
+    //         gameOver();
+    //     }
+    //         }
+ 
+ 
 
 // function to increment correct guesses score - based on the Score area from Love Maths
 
@@ -187,20 +237,22 @@ function incorrectGuessTally () {
 // }
 
 // function endGame () {
-//     while (currentIndex < numArray.length) {
+//     while (currentIndex < numArray[4]) {
 //         nextNumber();
 //     }
 // }
+
 function gameOver () {
     playerName = document.getElementById("name").value;
     // do {
     //     nextNumber();
     // }
-    //     while (currentIndex < numArray.length);
+        // while (currentIndex < numArray.length){
     
     alert(`Goodbye ${playerName}. Thanks for playing`);
     throw `Game Over!`; 
     // clear();
+
 }
 
 

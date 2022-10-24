@@ -48,7 +48,7 @@ The user is then welcomed by name.
 
 This section will be displayed to the user upon successfully signing in.
 
-![Game area screenshot](assets/images/README-images/game-area.png)
+![Game area screenshot](assets/images/README-images/game-area-display-answers.png)
 
 The user will be able to easily see five button icons displayed.  The first button icon displays the first number of the game.  The other four button icons display only a question mark.  The user will see two submit buttons below the five button icons, 'Higher' and 'Lower'.  The user selects either of these submit buttons to enter their guess and progress through the game.
 
