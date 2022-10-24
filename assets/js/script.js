@@ -1,7 +1,7 @@
 
 /**Game is to generate 5 random numbers between 1-20, user must guess whether each consecutive number is Higher or Lower than the 
- * previous number.  The number will be kept hidden from the user until they select either the Higher/Lower button. The game 
- * will continue until either all 5 numbers have been correctly guessed, or an incorrect guess ends the game.
+ * previous number.  The current number will be kept hidden from the user until they select either the Higher/Lower submit button. The game 
+ * will continue until all 5 numbers have been correctly guessed.
  */
 
 // Declare clickable buttons at Global scope
@@ -20,7 +20,7 @@ var playerName = document.getElementById("name").value;
 
 const gameSection = document.getElementsByClassName("game");
 
-// Declare nums to use as parameters in functions and what I need to compare i-- to i
+// Declare nums and numArray to use in functions and what I need to compare i+1 to i
 
 var num1;
 var num2;
@@ -31,12 +31,7 @@ var num5;
 var numArray = [num1, num2, num3, num4, num5];
 console.log(numArray);
 
-
 let currentIndex = 0;
-
-
-
-
 
 // Declare Tally section and variables at Global scope
 
@@ -45,7 +40,6 @@ const tallyCorrect = document.getElementById("tally-correct");
 const tallyIncorrect = document.getElementById("tally-incorrect");
 
 // Event listener for DOM load and to startGame on button click
-
     
  document.addEventListener("DOMContentLoaded", function() {
    
@@ -57,9 +51,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
 
         if (this.getAttribute("data-type") === "submit") {
             signIn();
-            
-            // startGame();
-            // alert("Starting Game");
+        
         } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user selection to compare numbers
             checkGuess(this.id);
@@ -70,7 +62,6 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
     })}
 });
    
-
 // functions to toggle between hide and show of sections
 
 function show () {
@@ -102,9 +93,8 @@ function signIn (){
         alert ("You must log in to play this game");
        
     } 
-   
-   
-    // function to generate numbers.  
+    
+// function to generate random numbers.  
 
  function startGame (gameButton) {   
 // Create 5 random numbers and pass them into the 5 html buttons. 
@@ -132,30 +122,31 @@ function signIn (){
     
     numArray = [num1, num2, num3, num4, num5];
     console.log(numArray);
-   
-    // gameButton = document.getElementsByClassName("game-button").innerHTML;  
+  
  }
-    //    event listener for either the Higher or Lower button to be clicked, indicating user has made a choice and the current hidden number is to be revealed.
+
+ //    event listener for either the Higher or Lower button to be clicked, indicating user has made a choice and the current hidden number is to be revealed.
 function myReveal () {
         
        const gameButton = document.getElementsByClassName("game-button")[currentIndex];
        console.log(gameButton);
         gameButton.innerHTML = numArray[currentIndex];
-        
+      
 }
     
 // function for game to loop to next number guess
 function nextNumber () {
    currentIndex++;
-//    do {
-//     currentIndex++;
-//    }
-//    while (currentIndex < numArray.length);
+   
+   do {
+    currentIndex++;
+   }
+   while (currentIndex < numArray.length);
+   gameOver();
 }
 
 
 // function to check whether user's guess matched hidden number
-
 function checkGuess (id) {
 
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
@@ -177,14 +168,14 @@ function checkGuess (id) {
     } 
 }  
 
-// function to increment correct guesses - based on the Score area from Love Maths
+// function to increment correct guesses score - based on the Score area from Love Maths
 
 function correctGuessTally () {
     let oldScore = parseInt(document.getElementById("tally-correct").innerText);
     document.getElementById("tally-correct").innerText = ++oldScore;
 }
 
-// function to increment incorrect guesses - based on the Score area from Love Maths
+// function to increment incorrect guesses score - based on the Score area from Love Maths
 
 function incorrectGuessTally () {
     let oldScore = parseInt(document.getElementById("tally-incorrect").innerText);
@@ -194,6 +185,7 @@ function incorrectGuessTally () {
 // function youWin () {
 
 // }
+
 // function endGame () {
 //     while (currentIndex < numArray.length) {
 //         nextNumber();
@@ -205,10 +197,10 @@ function gameOver () {
     //     nextNumber();
     // }
     //     while (currentIndex < numArray.length);
-    // }
-    // alert(`Goodbye ${playerName}. Thanks for playing`);
-    // throw `Game Over!`; 
-    // // clear();
-
+    
+    alert(`Goodbye ${playerName}. Thanks for playing`);
+    throw `Game Over!`; 
+    // clear();
 }
+
 

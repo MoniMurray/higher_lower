@@ -1,84 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.js"
+      integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>HIGHER lower - a deductive game of chance!</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="heading">
-        <img class="logo" src="assets/images/apple-touch-icon.png" alt="Icon image for website">
-    <h1>HIGHER lower<br> A Game of Chance!
-        
-    </h1>
+      <img
+        class="logo"
+        src="assets/images/apple-touch-icon.png"
+        alt="Icon image for website"
+      />
+      <h1>
+        HIGHER lower<br />
+        A Game of Chance!
+      </h1>
     </div>
 
-    
-
-<!-- game area containing random numbers div, voting div, increment score div, and timer div -->
+    <!-- game area containing random numbers div, voting div, increment score div, and timer div -->
     <div class="game-area">
-        
-    <!-- A sign-in input box which will load the game when submitted -->
-            <div id="load-signin" class="sign-in" >
-                <label for="name">Please sign in: </label>
-                <input id="name" type="text" name="username" value="" required pattern="[a-zA-Z0-9!@#$%^*_|]{4,8}" size="15" placeholder="Enter your name here"><br>
-                <button class="start-game" data-type="submit">Enter Game</button>
-                
-                <div class="directions">
-                    <h1 >Directions</h1>
-                    <p><b>How to Play:</b><br>The computer will generate 5 random numbers between 1-20,
-                        and display the first number to you. <br>
-                        Will the next number will be higher or lower than the previous number?<br>
-                        You must guess!<br>The number will be revealed when you guess and click on either<br><em>'Higher' or 'Lower'.</em> <br>
-                        Ready to play?<br>
-                        Enter your username above, and then click on 'Enter Game' to begin!</p>
-            </div>
-            </div>
-        <div id="load-game" class="game hide">
-            <h1>Guess will the next number be<br>
-                 <em>Higher</em> or <em>Lower</em><br> than the previous number</h1>
-            <div class="random-numbers">
-                <button class="button big-button game-button purple-button" type="button" value="button" disabled>?</button>
-                <button class="button big-button game-button pink-button" type="button" value="button" disabled>?</button>
-                <button class="button big-button game-button yellow-button" type="button" value="button" disabled>?</button>
-                <button class="button big-button game-button blue-button" type="button" value="button" disabled>?</button>
-                <button class="button big-button game-button green-button" type="button" value="button" disabled>?</button>
-            </div>
+      <!-- A sign-in input box which will load the game when submitted -->
+      <div id="load-signin" class="sign-in">
+        <label for="name">Please sign in: </label>
+        <input
+          id="name"
+          type="text"
+          name="username"
+          value=""
+          required
+          pattern="[a-zA-Z0-9!@#$%^*_|]{4,8}"
+          size="15"
+          placeholder="Enter your name here"
+        /><br />
+        <button class="start-game" data-type="submit">Enter Game</button>
 
-            <div class="vote-box">
-                <span><button id="choose-Higher" type="submit" value="submit">Higher</button></span>
-                <span><button id="choose-Lower" type="button" value="button">Lower</button></span>
-
-            </div>
+        <div class="directions">
+          <h1>Directions</h1>
+          <p>
+            <b>How to Play:</b><br />The computer will generate 5 random numbers
+            between 1-20, and display the first number to you. <br />
+            Will the next number will be higher or lower than the previous
+            number?<br />
+            You must guess!<br />The number will be revealed when you guess and
+            click on either<br /><em>'Higher' or 'Lower'.</em> <br />
+            Ready to play?<br />
+            Enter your username above, and then click on 'Enter Game' to begin!
+          </p>
         </div>
-    </div>
-    
-    
-    <div class="increment-scores" >
-        <p class="tally"> Correct <span id="tally-correct">0</span> Incorrect <span id="tally-incorrect">0</span></p>
+      </div>
+      <div id="load-game" class="game hide">
+        <h1>
+          Guess will the next number be<br />
+          <em>Higher</em> or <em>Lower</em><br />
+          than the previous number
+        </h1>
+        <div class="random-numbers">
+          <button
+            class="button big-button game-button purple-button"
+            type="button"
+            value="button"
+            disabled
+          >
+            ?
+          </button>
+          <button
+            class="button big-button game-button pink-button"
+            type="button"
+            value="button"
+            disabled
+          >
+            ?
+          </button>
+          <button
+            class="button big-button game-button yellow-button"
+            type="button"
+            value="button"
+            disabled
+          >
+            ?
+          </button>
+          <button
+            class="button big-button game-button blue-button"
+            type="button"
+            value="button"
+            disabled
+          >
+            ?
+          </button>
+          <button
+            class="button big-button game-button green-button"
+            type="button"
+            value="button"
+            disabled
+          >
+            ?
+          </button>
+        </div>
 
+        <div class="vote-box">
+          <span
+            ><button id="choose-Higher" type="submit" value="submit">
+              Higher
+            </button></span
+          >
+          <span
+            ><button id="choose-Lower" type="button" value="button">
+              Lower
+            </button></span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="increment-scores">
+      <p class="tally">
+        Correct <span id="tally-correct">0</span> Incorrect
+        <span id="tally-incorrect">0</span>
+      </p>
     </div>
     <div class="game-over hide">Game Over!</div>
-<!-- optional if I have time
-    <div class="timer">Against the clock!</div> -->
-
-    <!-- trying Canvas learned from YouTube Kris deBruin -->
-
-    <!-- <div>
-        <canvas id="myCanvas" width="600" height="400">
-            
-
-        </canvas>
-        <button type="button" onclick="flipCoin">Click</button>
-    </div> -->
-
+   
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
