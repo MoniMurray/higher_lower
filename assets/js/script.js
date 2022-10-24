@@ -176,8 +176,13 @@ function nextNumber () {
 
 // function to check whether user's guess matched hidden number
 function checkGuess (id) {
-let ansCount =   parseInt(answerCount.innerText);
-    if(ansCount == 4) {
+
+    let ansCount = parseInt(document.getElementById("answer-count").innerText);
+    document.getElementById("answer-count").innerText = ++ansCount;
+
+
+// let ansCount =  parseInt(answerCount.innerText);
+    if(ansCount === 4) {
         alert("Game over");
             
             console.log("cant click :(")
@@ -188,7 +193,9 @@ let ansCount =   parseInt(answerCount.innerText);
             //   chooseLower.style.display = "none"
       
     }else{
-     answerCount.innerText = ++ansCount;
+    //  answerCount.innerText = ++ansCount;
+    ++ansCount;
+
     const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
       
    
