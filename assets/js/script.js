@@ -11,6 +11,7 @@ const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
 const answerCount = document.getElementById("answer-count");
+const ansCount = parseInt(document.getElementById("answer-count").innerText); 
 
 // Declare signin variable at Global scope
 
@@ -156,8 +157,8 @@ function checkGuess (id) {
     let ansCount = parseInt(document.getElementById("answer-count").innerText);
     document.getElementById("answer-count").innerText = ++ansCount;
 
-    if(ansCount === 4) {
-                   
+    if (ansCount == 4) {
+                          
             chooseHigher.classList.add("hide");
             chooseLower.classList.add("hide");
             gameInstruction.classList.add("hide");
