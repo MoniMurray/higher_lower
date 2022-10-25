@@ -24,6 +24,8 @@ const gameSection = document.getElementsByClassName("game");
 const gameInstruction = document.getElementById("game-instruction");
 const gameEnd = document.getElementById("game-end");
 
+// const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
+
 // Declare nums and numArray to use in functions and what I need to compare i+1 to i
 
 var num1;
@@ -59,6 +61,7 @@ const tallyIncorrect = document.getElementById("tally-incorrect");
         } else if (userGuess) {
             // user has clicked on Higher or Lower button so compare user selection to compare numbers
             checkGuess(this.id);
+            counter();
             myReveal();
         } else {
             alert("Error"); 
@@ -151,8 +154,7 @@ function nextNumber () {
     currentIndex++;
    }
 
-// function to check whether user's guess matched hidden number
-function checkGuess (id) {
+   function counter () {
 
     let ansCount = parseInt(document.getElementById("answer-count").innerText);
     document.getElementById("answer-count").innerText = ++ansCount;
@@ -163,12 +165,17 @@ function checkGuess (id) {
             chooseLower.classList.add("hide");
             gameInstruction.classList.add("hide");
             gameEnd.classList.add("show");
-            gameOver();
+            // gameOver();
       
     } else {
     ++ansCount;
+   }
+}
 
-    const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
+// function to check whether user's guess matched hidden number
+function checkGuess (id) {
+
+        const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
       
    
     if (
@@ -189,7 +196,7 @@ function checkGuess (id) {
     }  
     
 }
-}      
+     
     
     // for (let currentIndex = 0; currentIndex < numArray.length; currentIndex++) {
     //     if (currentIndex <= numArray.length){
