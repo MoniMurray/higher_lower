@@ -40,7 +40,7 @@ let currentIndex = 0;
 
 // declare messages to use globally
 
-const messageContainer = document.getElementsByClassName("messages");
+const messageContainer = document.getElementsByClassName("messages")[0];
 const loginAlert = document.getElementById("log-in-msg");
 const welcomeMsg = document.getElementById("welcome-msg");
 const goodGuessMsg = document.getElementById("good-guess");
