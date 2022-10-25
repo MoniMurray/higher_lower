@@ -30,9 +30,13 @@ body {
     background-color: silver;
 }
 
-/* .sign-in::after, .start-game::after {
-    display: none;
-} */
+.messages {
+    border: 1px solid hsl(0, 62%, 69%);
+    width: 70%;
+    margin: .75em auto;
+    padding: .5em 0;
+}
+
 .game {
     margin-top: 4em;
 }
