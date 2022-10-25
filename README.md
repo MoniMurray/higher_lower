@@ -78,15 +78,19 @@ Test that user is prompted to input a username before starting the game.  Click 
 
 ### Bugs
 
-The text input box revealed on testing that spacebar-only keypress would be accepted as a username.
+The text input box revealed on testing by colleagues on Slack that spacebar-only keypress would be accepted as a username.
 
-**FIX this?**
+Fixed with trim() at the end of my playerName variable value.
 
 Testing during the game showed a bug where the user clicking on any of the button icons displayed the same positive or negative alert messages that would be expected only when selecting the 'Higher' or 'Lower' buttons.  Adding the HTML [disabled](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fmonimurray.github.io%2Fhigher_lower%2F) attribute resolved this bug.
 
 In-programming testing showed that the question counter caused the game to stop at 3 1/2 iterations instead of running to the full 4.  
 
 Resolved by taking the counter if/else statement out into it's own function to enable it run independently of other incrementing code and be called only when it is needed.
+
+In playing the game, I discovered an unexpected '21' - the game scope is for numbers between 1-20.  
+
+This was an oversight when generating the numbers randomly and was easily fixed - akin to a typo!
 
 ## Validator Testing
 

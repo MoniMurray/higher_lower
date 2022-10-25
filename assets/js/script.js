@@ -94,7 +94,7 @@ function logInAlert () {
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
-    playerName = document.getElementById("name").value;
+    playerName = document.getElementById("name").value.trim();
     console.log(playerName);
     if (playerName !== "") {
        alert (`Welcome ${playerName}`);
@@ -102,8 +102,8 @@ function signIn (){
        show();
     startGame();
      } else 
-        // alert ("You must log in to play this game");
-       logInAlert();
+        alert ("You must log in to play this game");
+    //    logInAlert();
     } 
     
 // function to generate random numbers.  
@@ -112,23 +112,23 @@ function signIn (){
 // Create 5 random numbers and pass them into the 5 html buttons. 
     remove ();
 
-    num1 = Math.floor(Math.random()*21) +1;    
+    num1 = Math.floor(Math.random()*20) +1;    
     let purpleButtonNumber = document.getElementsByClassName("purple-button")[0];
     purpleButtonNumber.innerHTML = num1;
           
-    num2 = Math.floor(Math.random()*21) +1;
+    num2 = Math.floor(Math.random()*20) +1;
     let pinkButtonNumber = document.getElementsByClassName("pink-button")[0];
     pinkButtonNumber = num2;
 
-    num3 = Math.floor(Math.random()*21) +1;
+    num3 = Math.floor(Math.random()*20) +1;
     let yellowButtonNumber = document.getElementsByClassName("yellow-button")[0];
     yellowButtonNumber = num3;
 
-    num4 = Math.floor(Math.random()*21) +1;
+    num4 = Math.floor(Math.random()*20) +1;
     let blueButtonNumber = document.getElementsByClassName("blue-button")[0];
     blueButtonNumber = num4;
 
-    num5 = Math.floor(Math.random()*21) +1;
+    num5 = Math.floor(Math.random()*20) +1;
     let greenButtonNumber = document.getElementsByClassName("green-button")[0]
     greenButtonNumber = num5;
     
