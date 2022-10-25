@@ -50,7 +50,9 @@ This section will be displayed to the user upon successfully signing in.
 
 ![Game area screenshot](assets/images/README-images/game-area-display-answers.png)
 
-The user will be able to easily see five button icons displayed.  The first button icon displays the first number of the game.  The other four button icons display only a question mark.  The user will see two submit buttons below the five button icons, 'Higher' and 'Lower'.  The user selects either of these submit buttons to enter their guess and progress through the game.
+The user will be able to easily see five button icons displayed.  The first button icon displays the first number of the game.  The other four button icons display only a question mark.  The user will see two submit buttons below the five button icons, 'Higher' and 'Lower'.  The user selects either of these clickable buttons to enter their guess and progress through the game.
+
+![end of game message](assets/images/README-images/game-over screenshot.png)
 
 #### The Score Area
 
@@ -84,7 +86,7 @@ Testing during the game showed a bug where the user clicking on any of the butto
 
 In-programming testing showed that the question counter caused the game to stop at 3 1/2 iterations instead of running to the full 4.  
 
-**WHY GOD, WHY??????**
+Resolved by taking the counter if/else statement out into it's own function to enable it run independently of other incrementing code and be called only when it is needed.
 
 ## Validator Testing
 
