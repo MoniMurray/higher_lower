@@ -10,8 +10,7 @@ const enterGameButton = document.getElementsByClassName("start-game");
 const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
-const answerCount = document.getElementById("answer-count");
-const ansCount = parseInt(document.getElementById("answer-count").innerText); 
+
 
 // Declare signin variable at Global scope
 
@@ -44,6 +43,8 @@ let currentIndex = 0;
 const tallySection = document.getElementsByClassName("tally");
 const tallyCorrect = document.getElementById("tally-correct");
 const tallyIncorrect = document.getElementById("tally-incorrect");
+const answerCount = document.getElementById("answer-count");
+const ansCount = parseInt(document.getElementById("answer-count").innerText); 
 
 // Event listener for DOM load and to startGame on button click
     
