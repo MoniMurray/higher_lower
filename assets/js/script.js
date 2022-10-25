@@ -96,8 +96,8 @@ function remove (){
 }
 
 function messageAlertBox () {
-    messageContainer = document.getElementsByClassName("messages");
-    element.classList.add("show");
+    messageContainer = document.getElementsByClassName("messages")[0];
+    messageContainer.classList.add("show");
 }
 
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  

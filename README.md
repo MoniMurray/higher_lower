@@ -9,8 +9,10 @@ The game will generate 5 random numbers between 1-20.  A user must sign-in to pl
 
 The user's score is counted and the Correct Answer score is displayed under the game area.
 
-**note - to do**
-[insert screenshot of deployed project here from http://amiresponsivedesign.is/website]
+![amiresponsive-screenshot](assets/images/README-images/amiresponsive-screenshot.png)
+[responsivity site](https://ui.dev/amiresponsive?url=%20https://monimurray.github.io/higher_lower/)
+
+
 ## Features
 [include screenshots of each feature]
 
