@@ -31,10 +31,13 @@
 
     <!-- game area containing random numbers div, voting div, increment score div, and timer div -->
     <div class="game-area">
-      <div class="messages">
-        <p> test message 
-        
+      <div class="messages hide">
+        <p class="hide" id="log-in-msg">You must log in to play this game     
         </p>
+        <p class="hide" id="welcome-mgs">Welcome <span></span></p>
+        <p class="hide" id="good-guess">Good guess :)</p>
+        <p class="hide" id="bad-guess">Not right this time :(</p>
+
       </div>
       <!-- A sign-in input box which will load the game when submitted -->
       <div id="load-signin" class="sign-in">

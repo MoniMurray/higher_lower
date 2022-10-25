@@ -38,6 +38,14 @@ console.log(numArray);
 
 let currentIndex = 0;
 
+// declare messages to use globally
+
+const messageContainer = document.getElementsByClassName("messages");
+const loginAlert = document.getElementById("log-in-msg");
+const welcomeMsg = document.getElementById("welcome-msg");
+const goodGuessMsg = document.getElementById("good-guess");
+const badGuessMsg = document.getElementById("bad-guess");
+
 // Declare Tally section and variables at Global scope
 
 const tallySection = document.getElementsByClassName("tally");
@@ -87,8 +95,8 @@ function remove (){
     element.classList.remove("hide");
 }
 
-function logInAlert () {
-    var element = document.getElementById("log-in");
+function messageAlertBox () {
+    messageContainer = document.getElementsByClassName("messages");
     element.classList.add("show");
 }
 
@@ -104,7 +112,8 @@ function signIn (){
     startGame();
      } else 
         alert ("You must log in to play this game");
-    //    logInAlert();
+        messageAlertBox ();
+    
     } 
     
 // function to generate random numbers.  
@@ -141,7 +150,7 @@ function signIn (){
  }
 
 
- //    event listener for either the Higher or Lower button to be clicked, indicating user has made a choice and the current hidden number is to be revealed.
+ //   reveal the number hidden inside the button icon
 function myReveal () {
         
        const gameButton = document.getElementsByClassName("game-button")[currentIndex];
@@ -151,12 +160,13 @@ function myReveal () {
       
 }
     
-// function for game to loop to next number guess
+// function for game to loop to next number to guess
 function nextNumber () {
 
     currentIndex++;
    }
 
+//  counter to show the user how many guesses out of 4 they're on
    function counter () {
 
     let ansCount = parseInt(document.getElementById("answer-count").innerText);
@@ -199,18 +209,9 @@ function checkGuess (id) {
     }  
     
 }
-     
+   
     
-    // for (let currentIndex = 0; currentIndex < numArray.length; currentIndex++) {
-    //     if (currentIndex <= numArray.length){
-    //         currentIndex++;
-    //     } else 
-    //     {
-    //         gameOver();
-    //     }
-    //         }
- 
- 
+     
 
 // function to increment correct guesses score - based on the Score area from Love Maths
 
