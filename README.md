@@ -144,6 +144,8 @@ I trialled using [JQuery](https://www.w3schools.com/jquery/default.asp) in this 
 
 [This](https://www.w3schools.com/js/js_if_else.asp) link helped me in resolving an error in if/else nested conditional statement, which was a missing semicolon in the middle of the code.
 
+Occasionally my randomly generated numbers confused the player by having two numbers the same beside each other - in this case the next number is neither Higher nor Lower.  I used [this YouTube video](https://www.youtube.com/watch?v=5sNGqsMpW1E) to add a simple shuffle to my numbers array.  Having played the game alot myself during production, it added a little fun to my work!
+
 #### CI course content
 
 When I couldn't quite remember how to do something taught in the course content, I reviewed it on the [LMS](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)!
@@ -180,4 +182,4 @@ from here: https://releases.jquery.com/
 
 #### Slack
 
-The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit in this group, and the kindness shown by people during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.
+The support from my own class cohort on Slack cannot be overstated.  The generosity of spirit in this group, and the kindness shown by people during stressful sections of the course content and project helped me carry on and, crucially, helped me think in a way that solved the problems as they arose.  A great community.

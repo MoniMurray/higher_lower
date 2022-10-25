@@ -134,7 +134,9 @@ function signIn (){
     
     numArray = [num1, num2, num3, num4, num5];
     console.log(numArray);
-  
+    // mix the numbers up a little, with a shuffle in the array from YouTube
+    numArray.sort((a,b) => 0.5 - Math.random());
+    console.log(numArray);
  }
 
 
