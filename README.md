@@ -107,7 +107,10 @@ No errors were returned when passing through the official [W3C validator](https:
 ![W3C HTML Validator screenshot](assets/images/README-images/w3html-validator-screenshot.png)
 
 ### CSS
-No errors were found when passing through the official (Jigsaw) validator
+Two minor errors were reported on first passing website through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
+
+![css validator errors](assets/images/README-images/w3c-css-validator-errors.png)
+
 ### JavaScript
 No errors were found when passing through the official Jshint validator
 The following metrics were returned:
