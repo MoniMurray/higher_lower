@@ -111,6 +111,8 @@ Two minor errors were reported on first passing website through [W3C CSS Validat
 
 ![css validator errors](assets/images/README-images/w3c-css-validator-errors.png)
 
+Once addressed, Higher Lower [passed](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmonimurray.github.io%2Fhigher_lower%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
+
 ### JavaScript
 No errors were found when passing through the official Jshint validator
 The following metrics were returned:
