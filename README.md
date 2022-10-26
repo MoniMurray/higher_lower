@@ -35,7 +35,7 @@ The Sign-in Area contains a text input box, a submit button, and Directions on h
 
 The user is prompted to enter a username to the text input box both by the placeholder in the text input box, and by an alert message if the user tries to start the game without signing in.  
 
-Once the user has entered a username into the text box, they must then click on the 'Enter Game' button to start the game.
+Once the user has entered a username into the text box, they must then either mouse-click on the 'Enter Game' button, or keyboard press 'Enter' to start the game.
 
 !['Enter Game' button screenshot](assets/images/README-images/enter-game-hover.png)
 
@@ -136,7 +136,7 @@ The following is a live link to the site - https://monimurray.github.io/higher_l
 
 #### CI Love Maths
 
-This walkthrough project gave me alot of ideas, both for appearance of my game through CSS and most particularly how to use JavaScript for the incrementing of user's scores throughout the game.
+This walkthrough project gave me alot of ideas, both for appearance of my game through CSS and most particularly how to use JavaScript for the incrementing of user's scores throughout the game, the DomLoading event listener and the user keypress 'Enter' to start the game.
 
 Stackoverflow
 
