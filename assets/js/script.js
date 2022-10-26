@@ -96,13 +96,65 @@ function remove (){
     var element = document.getElementById("load-game");
     element.classList.remove("hide");
 }
-
+// using w3schools to learn how to use css to create a pop-up message that is easy for the user to close without distracting from the game
 function messageAlertBox () {
     messageContainer = document.getElementsByClassName("messages")[0];
     messageContainer.classList.add("show");
+    
+    let closeButton = document.getElementById("close-btn");
+    closeButton.addEventListener("click", function(){
+        let div = this.parentElement;
+        div.style.opacity ="0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    
+    })
+    // let okayBtn = document.getElementById("okay");
+    // okayBtn.classList.add("show");
+    // okayBtn.addEventListener("click", function(){
+    //     document.getElementsByClassName("hide");
+    // });
 
 }
 
+function messageGoodGuess () {
+    messageContainer = document.getElementsByClassName("messages")[0];
+    messageContainer.classList.add("show");
+    goodGuessMsg.classList.add("show");
+    
+    let closeButton = document.getElementById("close-btn");
+    closeButton.addEventListener("click", function(){
+        let div = this.parentElement;
+        div.style.opacity ="0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    
+    })
+    // let okayBtn = document.getElementById("okay");
+    // okayBtn.classList.add("show");
+    // okayBtn.addEventListener("click", function(){
+    //     document.getElementsByClassName("hide");
+    // });
+
+}
+
+function messageBadGuess () {
+    messageContainer = document.getElementsByClassName("messages")[0];
+    messageContainer.classList.add("show");
+    badGuessMsg.classList.add("show");
+    
+    let closeButton = document.getElementById("close-btn");
+    closeButton.addEventListener("click", function(){
+        let div = this.parentElement;
+        div.style.opacity ="0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+    
+    })
+    // let okayBtn = document.getElementById("okay");
+    // okayBtn.classList.add("show");
+    // okayBtn.addEventListener("click", function(){
+    //     document.getElementsByClassName("hide");
+    // });
+
+}
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
@@ -201,15 +253,17 @@ function checkGuess (id) {
         isHigher && id === 'choose-Higher' ||
         !isHigher && id === 'choose-Lower'
     ) {
-        alert("Wizard!! You guessed correctly.");      
+        // alert("Wizard!! You guessed correctly.");      
         correctGuessTally();
         nextNumber();
         console.log(currentIndex);
+        messageGoodGuess();
     } else {
-        alert("Wrong guess, sorry :( ");
+        // alert("Wrong guess, sorry :( ");
         incorrectGuessTally();
         nextNumber();
         console.log(currentIndex);
+        messageBadGuess();
     }  
     
 }
