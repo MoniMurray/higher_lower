@@ -48,8 +48,6 @@
           name="username"
           value=""
           required
-          pattern="[a-zA-Z0-9!@#$%^*_|]{4,8}"
-          size="15"
           placeholder="Enter your name here"
         /><br />
         <button class="start-game" data-type="submit">Enter Game</button>
@@ -116,7 +114,7 @@
             ?
           </button>
         </div>
-
+<!-- The Higher/Lower guess buttons -->
         <div class="vote-box">
           <span
             ><button id="choose-Higher" type="submit" value="submit">
@@ -137,7 +135,7 @@
       <p id="log-alert" class="hide">You must log in to play!</p>
       <p id="welcome" class="hide">`Welcome ${playername}`</p>
     </div>
-
+<!-- User's score and question total -->
     <div class="increment-scores">
       <p>Question <span id="answer-count">0</span>/4</p>
       <p class="tally">

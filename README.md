@@ -5,7 +5,7 @@
 
 Higher Lower is an interactive, fully responsive game of chance.
 
-The game will generate 5 random numbers between 1-20.  A user must sign-in to play the game.  The user is welcomed, and the first number of 5 is displayed.  The user must guess whether each consecutive number is Higher or Lower than the previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button to guess the outcome of that number. The game will continue until either all 5 numbers have been correctly guessed, or an incorrect guess ends the game.
+The game will generate 5 random numbers between 1-20.  A user must sign-in to play the game.  The user is welcomed, and the first number of 5 is displayed.  The user must guess whether each consecutive number is Higher or Lower than the previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button to guess the outcome of that number. The game will continue until all numbers have been correctly guessed.
 
 The user's score is counted and the Correct Answer score is displayed under the game area.
 
@@ -14,9 +14,8 @@ The user's score is counted and the Correct Answer score is displayed under the 
 
 
 ## Features
-[include screenshots of each feature]
 
-In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
+The game is designed for players of all ages. The directions are easy to understand and the game is uncomplicated to play.  A bright and clean colour palette was chosen for a positive user experience.  
 
 ### Existing Features
 

@@ -20,8 +20,6 @@ var playerName = document.getElementById("name").value;
 const gameInstruction = document.getElementById("game-instruction");
 const gameEnd = document.getElementById("game-end");
 
-// const isHigher = numArray[currentIndex+1] > numArray[currentIndex] ? true : false;
-
 // Declare nums and numArray to use in functions and what I need to compare i+1 to i
 
 var num1;
@@ -66,7 +64,7 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
             signIn();
         
         } else if (userGuess) {
-            // user has clicked on Higher or Lower button so compare user selection to compare numbers
+            // user has clicked on Higher or Lower button so compare user selection to hidden numbers
             checkGuess(this.id);
             counter();
             myReveal();
@@ -74,6 +72,12 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
             alert("Error"); 
         }
     });}
+    // Add event listener for user pressing the enter key after typing their user name on a keyboard, from Love Maths
+    document.getElementById("name").addEventListener("keydown", function (event){
+        if (event.key === "Enter"){
+            signIn();
+        }
+    });
 });
    
 // functions to toggle between hide and show of sections
@@ -121,7 +125,7 @@ function signIn (){
 // function to generate random numbers.  
 
  function startGame (gameButton) {   
-// Create 5 random numbers and pass them into the 5 html buttons. 
+// Create 5 random numbers and pass them into the 5 html button icons. 
     remove ();
 
     num1 = Math.floor(Math.random()*20) +1;    
@@ -227,27 +231,11 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
-// function youWin () {
-
+// function gameOver () {
+//     playerName = document.getElementById("name").value;
+        
+//     alert(`Goodbye ${playerName}. Thanks for playing`);
+//     throw `Game Over!`; 
 // }
-
-// function endGame () {
-//     while (currentIndex < numArray[4]) {
-//         nextNumber();
-//     }
-// }
-
-function gameOver () {
-    playerName = document.getElementById("name").value;
-    // do {
-    //     nextNumber();
-    // }
-        // while (currentIndex < numArray.length){
-    
-    alert(`Goodbye ${playerName}. Thanks for playing`);
-    throw `Game Over!`; 
-    // clear();
-
-}
 
 
