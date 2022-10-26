@@ -100,6 +100,7 @@ function remove (){
 function messageAlertBox () {
     messageContainer = document.getElementsByClassName("messages")[0];
     messageContainer.classList.add("show");
+    loginAlert.classList.add("show");
     
     let closeButton = document.getElementById("close-btn");
     closeButton.addEventListener("click", function(){
@@ -107,13 +108,7 @@ function messageAlertBox () {
         div.style.opacity ="0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
     
-    })
-    // let okayBtn = document.getElementById("okay");
-    // okayBtn.classList.add("show");
-    // okayBtn.addEventListener("click", function(){
-    //     document.getElementsByClassName("hide");
-    // });
-
+    });
 }
 
 function messageGoodGuess () {
@@ -127,13 +122,7 @@ function messageGoodGuess () {
         div.style.opacity ="0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
     
-    })
-    // let okayBtn = document.getElementById("okay");
-    // okayBtn.classList.add("show");
-    // okayBtn.addEventListener("click", function(){
-    //     document.getElementsByClassName("hide");
-    // });
-
+    });
 }
 
 function messageBadGuess () {
@@ -147,14 +136,9 @@ function messageBadGuess () {
         div.style.opacity ="0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
     
-    })
-    // let okayBtn = document.getElementById("okay");
-    // okayBtn.classList.add("show");
-    // okayBtn.addEventListener("click", function(){
-    //     document.getElementsByClassName("hide");
-    // });
-
+    });
 }
+
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
 function signIn (){
     document.getElementById("name").required = true;
@@ -170,7 +154,7 @@ function signIn (){
      } else 
         // alert ("You must log in to play this game");
         messageAlertBox ();
-        loginAlert.classList.add("show");
+        // loginAlert.classList.add("show");
     
     } 
     
@@ -253,11 +237,12 @@ function checkGuess (id) {
         isHigher && id === 'choose-Higher' ||
         !isHigher && id === 'choose-Lower'
     ) {
+        messageGoodGuess();
         // alert("Wizard!! You guessed correctly.");      
         correctGuessTally();
         nextNumber();
         console.log(currentIndex);
-        messageGoodGuess();
+        
     } else {
         // alert("Wrong guess, sorry :( ");
         incorrectGuessTally();
