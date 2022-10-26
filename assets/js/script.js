@@ -40,13 +40,13 @@ let currentIndex = 0;
 
 // declare messages to use globally
 
-const messageContainer = document.getElementsByClassName("messages")[0];
-const loginAlert = document.getElementById("log-in-msg");
-const welcomeMsg = document.getElementById("welcome-msg");
-const goodGuessMsg = document.getElementById("good-guess");
-const badGuessMsg = document.getElementById("bad-guess");
+let messageContainer = document.getElementsByClassName("messages")[0];
+let loginAlert = document.getElementById("log-in-msg");
+let welcomeMsg = document.getElementById("welcome-msg");
+let goodGuessMsg = document.getElementById("good-guess");
+let badGuessMsg = document.getElementById("bad-guess");
 
-const messageArray = [loginAlert, welcomeMsg, goodGuessMsg, badGuessMsg];
+let messageArray = [loginAlert, welcomeMsg, goodGuessMsg, badGuessMsg];
 
 // Declare Tally section and variables at Global scope
 
@@ -100,6 +100,7 @@ function remove (){
 function messageAlertBox () {
     messageContainer = document.getElementsByClassName("messages")[0];
     messageContainer.classList.add("show");
+
 }
 
 // function to sign in a player - User login on entering their name to the input field and clicking 'Start', toggling signin off and game area on  
@@ -109,12 +110,15 @@ function signIn (){
     console.log(playerName);
     if (playerName !== "") {
        alert (`Welcome ${playerName}`);
+    // messageAlertBox();
+    // welcomeMsg.classList.add("show");
        hide();
        show();
     startGame();
      } else 
-        alert ("You must log in to play this game");
+        // alert ("You must log in to play this game");
         messageAlertBox ();
+        loginAlert.classList.add("show");
     
     } 
     
@@ -141,7 +145,7 @@ function signIn (){
     blueButtonNumber = num4;
 
     num5 = Math.floor(Math.random()*20) +1;
-    let greenButtonNumber = document.getElementsByClassName("green-button")[0]
+    let greenButtonNumber = document.getElementsByClassName("green-button")[0];
     greenButtonNumber = num5;
     
     numArray = [num1, num2, num3, num4, num5];
