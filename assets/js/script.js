@@ -46,6 +46,8 @@ const welcomeMsg = document.getElementById("welcome-msg");
 const goodGuessMsg = document.getElementById("good-guess");
 const badGuessMsg = document.getElementById("bad-guess");
 
+const messageArray = [loginAlert, welcomeMsg, goodGuessMsg, badGuessMsg];
+
 // Declare Tally section and variables at Global scope
 
 const tallySection = document.getElementsByClassName("tally");

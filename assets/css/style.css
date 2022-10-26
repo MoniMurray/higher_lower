@@ -14,7 +14,6 @@ body {
 
 .logo {
     height: 6em;
-    padding: auto;
 }
 
 /* style the area the sign-in and game will be contained within */
@@ -67,7 +66,6 @@ body {
 }
 
 .directions, .sign-in {
-    display: justify;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.2rem;
     color: #3a3a3a;
