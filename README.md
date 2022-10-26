@@ -10,7 +10,7 @@ The game will generate 5 random numbers between 1-20.  A user must sign-in to pl
 The user's score is counted and the Correct Answer score is displayed under the game area.
 
 ![amiresponsive-screenshot](assets/images/README-images/amiresponsive-screenshot.png)
-[responsivity site](https://ui.dev/amiresponsive?url=%20https://monimurray.github.io/higher_lower/)
+[Responsivity](https://ui.dev/amiresponsive?url=%20https://monimurray.github.io/higher_lower/)
 
 
 ## Features
@@ -25,7 +25,7 @@ Featured at the top of the page, the bespoke logo and heading is easy to see for
 
 ![logo and heading screenshot](assets/images/README-images/logo%20and%20heading.png)
 
-Bespoke logo designed using the favicon.io generator https://favicon.io/
+Bespoke logo designed using the [favicon.io generator](https://favicon.io/)
 
 #### The Sign-in Area
 
