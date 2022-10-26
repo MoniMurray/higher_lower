@@ -98,7 +98,7 @@ In playing the game, I discovered an unexpected '21' - the game scope is for num
 
 This was an oversight when generating the numbers randomly and was easily fixed - akin to a typo!
 
-One final bug remaining is that the message container, once called, will not re-appear for the user during the playing of the guessing game.  This is a development and style issue and does not effect the playability of the game.
+A bug that was a development and style issue, but a bug nevertheless, was that the message container, once called, would not re-appear again in the game during the guessing section of the game.  This was fixed by removing opacity from the css styling which was preventing the container from hiding and then re-showing during play.
 
 ## Validator Testing
 

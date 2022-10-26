@@ -103,8 +103,7 @@ function messageAlertBox () {
     let closeButton = document.getElementById("close-btn");
     closeButton.addEventListener("click", function(){
         let div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
+        div.classList.add("hide");
         messageContainer.classList.remove("show");
         loginAlert.classList.remove("show");
     
@@ -119,8 +118,7 @@ function messageGoodGuess () {
     let closeButton = document.getElementById("close-btn");
     closeButton.addEventListener("click", function(){
         let div = this.parentElement;
-        div.style.opacity ="0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
+        div.classList.add("hide");
         goodGuessMsg.classList.remove("show");
         messageContainer.classList.remove("show");
     
@@ -135,8 +133,7 @@ function messageBadGuess () {
     let closeButton = document.getElementById("close-btn");
     closeButton.addEventListener("click", function(){
         let div = this.parentElement;
-        div.style.opacity ="0";
-        setTimeout(function(){ div.style.display = "none"; }, 600);
+        div.classList.add("hide");
         badGuessMsg.classList.remove("show");
         messageContainer.classList.remove("show");
     
