@@ -41,8 +41,6 @@ let welcomeMsg = document.getElementById("welcome-msg");
 let goodGuessMsg = document.getElementById("good-guess");
 let badGuessMsg = document.getElementById("bad-guess");
 
-let messageArray = [loginAlert, welcomeMsg, goodGuessMsg, badGuessMsg];
-
 // Declare Tally section and variables at Global scope
 
 const tallyCorrect = document.getElementById("tally-correct");
@@ -105,8 +103,10 @@ function messageAlertBox () {
     let closeButton = document.getElementById("close-btn");
     closeButton.addEventListener("click", function(){
         let div = this.parentElement;
-        div.style.opacity ="0";
+        div.style.opacity = "0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
+        messageContainer.classList.remove("show");
+        loginAlert.classList.remove("show");
     
     });
 }
@@ -121,6 +121,8 @@ function messageGoodGuess () {
         let div = this.parentElement;
         div.style.opacity ="0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
+        goodGuessMsg.classList.remove("show");
+        messageContainer.classList.remove("show");
     
     });
 }
@@ -135,6 +137,8 @@ function messageBadGuess () {
         let div = this.parentElement;
         div.style.opacity ="0";
         setTimeout(function(){ div.style.display = "none"; }, 600);
+        badGuessMsg.classList.remove("show");
+        messageContainer.classList.remove("show");
     
     });
 }

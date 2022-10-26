@@ -98,6 +98,8 @@ In playing the game, I discovered an unexpected '21' - the game scope is for num
 
 This was an oversight when generating the numbers randomly and was easily fixed - akin to a typo!
 
+One final bug remaining is that the message container, once called, will not re-appear for the user during the playing of the guessing game.  This is a development and style issue and does not effect the playability of the game.
+
 ## Validator Testing
 
 ### Lighthouse
@@ -154,6 +156,8 @@ I relied on 'googling' many of my 'how to...' questions.  Google results varied 
 I trialled using [JQuery](https://www.w3schools.com/jquery/default.asp) in this project to toggle images on and off on a mouse click, but in the end judged that using CSS was simpler and more effective.  I used [this](https://www.w3schools.com/howto/howto_js_remove_class.asp) link to learn how to add a styled class to the elements I wanted to show/hide.
 
 [This](https://www.w3schools.com/js/js_if_else.asp) link helped me in resolving an error in if/else nested conditional statement, which was a missing semicolon in the middle of the code.
+
+In final touch ups I included [bespoke messages](https://www.w3schools.com/howto/howto_js_alert.asp) to the user using HTML, CSS and Javascript instead of more impersonal windows alerts.
 
 Occasionally my randomly generated numbers confused the player by having two numbers the same beside each other - in this case the next number is neither Higher nor Lower.  I used [this YouTube video](https://www.youtube.com/watch?v=5sNGqsMpW1E) to add a simple shuffle to my numbers array.  Having played the game alot myself during production, it added a little fun to my work!
 
