@@ -241,14 +241,12 @@ function checkGuess (id) {
         isHigher && id === 'choose-Higher' ||
         !isHigher && id === 'choose-Lower'
     ) {
-        messageGoodGuess();
-        // alert("Wizard!! You guessed correctly.");      
+        messageGoodGuess();     
         correctGuessTally();
         nextNumber();
         console.log(currentIndex);
         
     } else {
-        // alert("Wrong guess, sorry :( ");
         incorrectGuessTally();
         nextNumber();
         console.log(currentIndex);
@@ -257,9 +255,6 @@ function checkGuess (id) {
     
 }
    
-    
-     
-
 // function to increment correct guesses score - based on the Score area from Love Maths
 
 function correctGuessTally () {
@@ -274,11 +269,5 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
-// function gameOver () {
-//     playerName = document.getElementById("name").value;
-        
-//     alert(`Goodbye ${playerName}. Thanks for playing`);
-//     throw `Game Over!`; 
-// }
 
 
