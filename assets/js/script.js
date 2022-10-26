@@ -6,7 +6,6 @@
 
 // Declare clickable buttons at Global scope
 
-const enterGameButton = document.getElementsByClassName("start-game");
 const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
@@ -14,12 +13,10 @@ var userGuess = chooseHigher || chooseLower;
 
 // Declare signin variable at Global scope
 
-const signInSection = document.getElementsByClassName("sign-in");
 var playerName = document.getElementById("name").value;
 
 // Declare game area at Global scope
 
-const gameSection = document.getElementsByClassName("game");
 const gameInstruction = document.getElementById("game-instruction");
 const gameEnd = document.getElementById("game-end");
 
@@ -50,7 +47,6 @@ let messageArray = [loginAlert, welcomeMsg, goodGuessMsg, badGuessMsg];
 
 // Declare Tally section and variables at Global scope
 
-const tallySection = document.getElementsByClassName("tally");
 const tallyCorrect = document.getElementById("tally-correct");
 const tallyIncorrect = document.getElementById("tally-incorrect");
 const answerCount = document.getElementById("answer-count");
