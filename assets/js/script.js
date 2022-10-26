@@ -73,7 +73,7 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
         } else {
             alert("Error"); 
         }
-    })}
+    });}
 });
    
 // functions to toggle between hide and show of sections
@@ -197,13 +197,11 @@ function checkGuess (id) {
         isHigher && id === 'choose-Higher' ||
         !isHigher && id === 'choose-Lower'
     ) {
-        true;
         alert("Wizard!! You guessed correctly.");      
         correctGuessTally();
         nextNumber();
         console.log(currentIndex);
     } else {
-        false;
         alert("Wrong guess, sorry :( ");
         incorrectGuessTally();
         nextNumber();
