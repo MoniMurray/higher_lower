@@ -62,7 +62,12 @@ This section will allow the user to see exactly how many correct answers they ha
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 Features Left to Implement
-Another feature idea
+
+Pop-up messages 
+
+#### Another feature idea
+
+Another feature of the game in the future might be to have levels with a larger span of numbers generated from which the user will have to guess.
 
 ## Testing
 In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
