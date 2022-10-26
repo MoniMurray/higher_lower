@@ -171,6 +171,12 @@ Wireframe sketched on Balsamiq Wireframes.
 
 Site designed and deployed on Gitpod and Github.
 
+## Wireframe
+
+The Wireframe for this project was created using Balsamiq.
+
+![Balsamiq wireframe for Higher Lower game](assets/images/README-images/balsamiq-wireframe-screenshot.png)
+
 ## Acknowledgements
 
 #### Mentor Support
