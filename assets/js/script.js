@@ -30,7 +30,6 @@ var num4;
 var num5;
 
 var numArray = [num1, num2, num3, num4, num5];
-console.log(numArray);
 
 let currentIndex = 0;
 
@@ -81,11 +80,7 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
     document.getElementById("rePlay").addEventListener("click", function () {
         if (this.getAttribute("data-type") === "submit2") {
             alert (`Let's play again ${playerName}`);
-        // show();
-    //     hide();
-    //    startGame(); 
-    //    ansCount = 0;
-    location.reload(startGame());
+            location.reload(startGame());
  }
 });
 });
@@ -198,10 +193,8 @@ function signIn (){
     greenButtonNumber = num5;
     
     numArray = [num1, num2, num3, num4, num5];
-    console.log(numArray);
     // mix the numbers up a little, with a shuffle in the array from YouTube
     numArray.sort((a,b) => 0.5 - Math.random());
-    console.log(numArray);
  }
 
 
@@ -209,9 +202,7 @@ function signIn (){
 function myReveal () {
         
        const gameButton = document.getElementsByClassName("game-button")[currentIndex];
-       console.log(gameButton);
         gameButton.innerHTML = numArray[currentIndex];
-        console.log(numArray[currentIndex]);
       
 }
     
@@ -278,13 +269,6 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
-// function rePLayGame (){
-//     // playAgain = document.getElementById("rePlay");
-//     // playAgain.addEventListener("click", function () {
-//     //     startGame();
-        
-//     // }
-//     location.reload();
-// }
+
 
 
