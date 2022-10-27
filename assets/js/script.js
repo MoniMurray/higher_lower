@@ -9,6 +9,7 @@
 const chooseHigher = document.getElementById("choose-Higher");
 const chooseLower = document.getElementById("choose-Lower");
 var userGuess = chooseHigher || chooseLower;
+var playAgain = document.getElementById("rePlay");
 
 
 // Declare signin variable at Global scope
@@ -76,6 +77,17 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
             signIn();
         }
     });
+    // Add event listener for user clicking on the Play Again button
+    document.getElementById("rePlay").addEventListener("click", function () {
+        if (this.getAttribute("data-type") === "submit") {
+            alert (`Let's play again ${playerName}`);
+        // show();
+    //     hide();
+    //    startGame(); 
+    //    ansCount = 0;
+    location.reload();
+ }
+});
 });
    
 // functions to toggle between hide and show of sections
@@ -221,7 +233,7 @@ function nextNumber () {
             chooseLower.classList.add("hide");
             gameInstruction.classList.add("hide");
             gameEnd.classList.add("show");
-            // gameOver();
+            playAgain.classList.add("show");
       
     } else {
     ++ansCount;
@@ -266,5 +278,13 @@ function incorrectGuessTally () {
     document.getElementById("tally-incorrect").innerText = ++oldScore;
 }
 
+// function rePLayGame (){
+//     // playAgain = document.getElementById("rePlay");
+//     // playAgain.addEventListener("click", function () {
+//     //     startGame();
+        
+//     // }
+//     location.reload();
+// }
 
 
