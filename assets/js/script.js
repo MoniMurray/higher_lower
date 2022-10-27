@@ -224,6 +224,8 @@ function nextNumber () {
             chooseLower.classList.add("hide");
             gameInstruction.classList.add("hide");
             gameEnd.classList.add("show");
+            let personalisedMessage = `Thank you for playing ${playerName}`;
+            document.getElementById("game-end").innerHTML = personalisedMessage;
             playAgain.classList.add("show");
       
     } else {
