@@ -5,7 +5,7 @@
 
 Higher Lower is an interactive, fully responsive game of chance.
 
-The game will generate 5 random numbers between 1-20.  A user must sign-in to play the game.  The user is welcomed, and the first number of 5 is displayed.  The user must guess whether each consecutive number is Higher or Lower than the previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower button to guess the outcome of that number. The game will continue until all numbers have been correctly guessed.
+The game generates 5 random numbers between 1-20.  A user must sign-in to play the game.  The user is welcomed, five brightly-coloured button icons display in a horizontal row and the first number of 5 is revealed with the remaining 4 numbers hidden behind a *question mark* on each button icon.  The user must guess whether each consecutive number is Higher or Lower than the previous number.  The numbers will be kept hidden from the user until they select either the Higher/Lower clickable button to guess the outcome of that number. The game will continue until all numbers have been correctly guessed.
 
 The user's score is counted and the Correct Answer score is displayed under the game area.
 
@@ -21,7 +21,7 @@ The game is designed for players of all ages. The directions are easy to underst
 
 #### Higher Lower Logo and Heading
 
-Featured at the top of the page, the bespoke logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
+Featured at the top of the page, the bespoke logo and heading is easy to see for the user. Upon loading the page, the user will be presented with the name of the game.
 
 ![logo and heading screenshot](assets/images/README-images/logo%20and%20heading.png)
 
@@ -41,11 +41,11 @@ Once the user has entered a username into the text box, they must then either mo
 
 The graphics of the 'Enter Game' button are consistent in style and colour with the game's icon for optimum user experience.
 
-The user's name is then used in all game and browser messages.
+The user's name is then populated in all game and browser messages.
 
 #### The Game Area
 
-This section will be displayed to the user upon successfully signing in.
+This section will be displayed to the user upon successfully signing in, with a shorter game play instruction.
 
 ![Game area screenshot](assets/images/README-images/game-area-display-answers.png)
 
