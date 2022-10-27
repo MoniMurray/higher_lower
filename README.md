@@ -106,6 +106,8 @@ This was an oversight when generating the numbers randomly and was easily fixed 
 
 A bug that was a development and style issue, but a bug nevertheless, was that the message container, once called, would not re-appear again in the game during the guessing section of the game.  This was fixed by removing opacity from the css styling which was preventing the container from hiding and then re-showing during play.
 
+A 404 favicon error persisted throughout testing.  I searched the error in the [CI Slack channel](https://app.slack.com/client/T0L30B202/search/search-eyJkIjoiNDA0JTIwZXJyb3IlMjBmYXZpY29uIiwicSI6IlUwM0tFREVWNkU4IiwiciI6IjQwNCUyMGVycm9yJTIwZmF2aWNvbiJ9/thread/C7HD37Q1F-1596806951.039200) and found a suggestion to use `<link rel="shortcut icon" href="#"/>>` in the `<Head>`, and this fixed the bug.
+
 ## Validator Testing
 
 ### Lighthouse
