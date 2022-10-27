@@ -85,7 +85,7 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
     //     hide();
     //    startGame(); 
     //    ansCount = 0;
-    location.reload();
+    location.reload(startGame());
  }
 });
 });

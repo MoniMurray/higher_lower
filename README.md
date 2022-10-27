@@ -163,7 +163,7 @@ I trialled using [JQuery](https://www.w3schools.com/jquery/default.asp) in this 
 
 [This](https://www.w3schools.com/js/js_if_else.asp) link helped me in resolving an error in if/else nested conditional statement, which was a missing semicolon in the middle of the code.
 
-In final touch ups I included [bespoke messages](https://www.w3schools.com/howto/howto_js_alert.asp) to the user using HTML, CSS and Javascript instead of more impersonal windows alerts.
+In final touch ups I included [bespoke messages](https://www.w3schools.com/howto/howto_js_alert.asp) to the user using HTML, CSS and Javascript instead of more impersonal windows alerts, and [replaying the game](https://www.w3schools.com/js/js_window_location.asp) was included by using the location.reload() property which I found [here](https://www.w3schools.com/jsref/met_loc_reload.asp).
 
 Occasionally my randomly generated numbers confused the player by having two numbers the same beside each other - in this case the next number is neither Higher nor Lower.  I used [this YouTube video](https://www.youtube.com/watch?v=5sNGqsMpW1E) to add a simple shuffle to my numbers array.  Having played the game alot myself during production, it added a little fun to my work!
 
