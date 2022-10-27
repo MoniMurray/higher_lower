@@ -1,150 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="shortcut icon" href="#" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>HIGHER lower - a deductive game of chance!</title>
-  </head>
-  <body>
-    <div class="heading">
-      <img
-        class="logo"
-        src="assets/images/apple-touch-icon.png"
-        alt="Icon image for website"
-      />
-      <h1>
-        HIGHER lower<br />
-        A Game of Chance!
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="#" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>HIGHER lower - a deductive game of chance!</title>
+</head>
+
+<body>
+  <div class="heading">
+    <img class="logo" src="assets/images/apple-touch-icon.png" alt="Icon image for website" />
+    <h1>
+      HIGHER lower<br />
+      A Game of Chance!
+    </h1>
+  </div>
+
+  <!-- game area containing random numbers div, voting div, increment score div, and timer div -->
+  <div class="game-area">
+    <!-- message div to contain pop-ups -->
+    <div class="messages hide alert">
+      <span id="close-btn">&times;</span>
+      <p class="hide" id="log-in-msg">You must log in to play this game</p>
+      <p class="hide" id="welcome-mgs">Welcome</p>
+      <p class="hide" id="good-guess">Good guess :)</p>
+      <p class="hide" id="bad-guess">Not right this time :(</p>
+    </div>
+
+    <!-- A sign-in input box which will load the game when submitted -->
+    <div id="load-signin" class="sign-in">
+      <label for="name">Please sign in: </label>
+      <input id="name" type="text" name="username" value="" required placeholder="Enter your name here" /><br />
+      <button class="start-game" data-type="submit">Enter Game</button>
+
+      <div class="directions">
+        <h1>Directions</h1>
+        <p>
+          <b>How to Play:</b><br />The computer will generate 5 random numbers
+          between 1-20, and display the first number to you. <br />
+          Will the next number be higher or lower than the previous number?<br />You
+          must guess!<br />The hidden number is revealed when you guess and
+          click on either<br /><em>'Higher' or 'Lower'.</em> <br />
+          Ready to play?<br />Enter your username above, and then click on
+          'Enter Game' to begin!
+        </p>
+      </div>
+    </div>
+    <div id="load-game" class="game hide">
+      <h1 id="game-instruction">
+        Guess will the next number be<br />
+        <em>Higher</em> or <em>Lower</em><br />
+        than the previous number
       </h1>
-    </div>
-
-    <!-- game area containing random numbers div, voting div, increment score div, and timer div -->
-    <div class="game-area">
-      <!-- message div to contain pop-ups -->
-      <div class="messages hide alert">
-        <span id="close-btn">&times;</span>
-        <p class="hide" id="log-in-msg">You must log in to play this game </p>  
-        <p class="hide" id="welcome-mgs">Welcome</p>
-        <p class="hide" id="good-guess">Good guess :)</p>
-        <p class="hide" id="bad-guess">Not right this time :(</p>
+      <div class="random-numbers">
+        <button class="button big-button game-button purple-button" type="button" value="button" disabled>
+          ?
+        </button>
+        <button class="button big-button game-button pink-button" type="button" value="button" disabled>
+          ?
+        </button>
+        <button class="button big-button game-button yellow-button" type="button" value="button" disabled>
+          ?
+        </button>
+        <button class="button big-button game-button blue-button" type="button" value="button" disabled>
+          ?
+        </button>
+        <button class="button big-button game-button green-button" type="button" value="button" disabled>
+          ?
+        </button>
       </div>
-
-      <!-- A sign-in input box which will load the game when submitted -->
-      <div id="load-signin" class="sign-in">
-        <label for="name">Please sign in: </label>
-        <input
-          id="name"
-          type="text"
-          name="username"
-          value=""
-          required
-          placeholder="Enter your name here"
-        /><br />
-        <button class="start-game" data-type="submit">Enter Game</button>
-
-        <div class="directions">
-          <h1>Directions</h1>
-          <p>
-            <b>How to Play:</b><br />The computer will generate 5 random numbers
-            between 1-20, and display the first number to you. <br />
-            Will the next number be higher or lower than the previous
-            number?<br />
-            You must guess!<br />The hidden number is revealed when you guess and
-            click on either<br /><em>'Higher' or 'Lower'.</em> <br />
-            Ready to play?<br />
-            Enter your username above, and then click on 'Enter Game' to begin!
-          </p>
-        </div>
+      <!-- The Higher/Lower guess buttons -->
+      <div class="vote-box">
+        <span><button id="choose-Higher" type="submit" value="submit">
+            Higher
+          </button></span>
+        <span><button id="choose-Lower" type="button" value="button">
+            Lower
+          </button></span>
+        <h1 id="game-end" class="hide">Game Over! Thank you for playing!!</h1>
       </div>
-      <div id="load-game" class="game hide">
-        <h1 id="game-instruction">
-          Guess will the next number be<br />
-          <em>Higher</em> or <em>Lower</em><br />
-          than the previous number
-        </h1>
-        <div class="random-numbers">
-          <button
-            class="button big-button game-button purple-button"
-            type="button"
-            value="button"
-            disabled
-          >
-            ?
-          </button>
-          <button
-            class="button big-button game-button pink-button"
-            type="button"
-            value="button"
-            disabled
-          >
-            ?
-          </button>
-          <button
-            class="button big-button game-button yellow-button"
-            type="button"
-            value="button"
-            disabled
-          >
-            ?
-          </button>
-          <button
-            class="button big-button game-button blue-button"
-            type="button"
-            value="button"
-            disabled
-          >
-            ?
-          </button>
-          <button
-            class="button big-button game-button green-button"
-            type="button"
-            value="button"
-            disabled
-          >
-            ?
-          </button>
-        </div>
-<!-- The Higher/Lower guess buttons -->
-        <div class="vote-box">
-          <span
-            ><button id="choose-Higher" type="submit" value="submit">
-              Higher
-            </button></span
-          >
-          <span
-            ><button id="choose-Lower" type="button" value="button">
-              Lower
-            </button></span
-          >
-          <h1 id="game-end" class="hide">Game Over! Thank you for playing!!</h1>
-        </div>
-        <button
-            class="hide" id="rePlay"
-            data-type="submit2"
-            value="button"         
-          >
-            Play Again
-          </button>
-      </div>
+      <button class="hide" id="rePlay" data-type="submit2" value="button">
+        Play Again
+      </button>
     </div>
+  </div>
 
-    <div class="messages hide">
-      <p id="log-alert" class="hide">You must log in to play!</p>
-      <p id="welcome" class="hide">`Welcome ${playername}`</p>
-    </div>
-<!-- User's score and question total -->
-    <div class="increment-scores">
-      <p>Question <span id="answer-count">0</span>/4</p>
-      <p class="tally">
-        Correct <span id="tally-correct">0</span> Incorrect
-        <span id="tally-incorrect">0</span>
-      </p>
-    </div>
+  <div class="messages hide">
+    <p id="log-alert" class="hide">You must log in to play!</p>
+    <p id="welcome" class="hide">`Welcome ${playername}`</p>
+  </div>
+  <!-- User's score and question total -->
+  <div class="increment-scores">
+    <p>Question <span id="answer-count">0</span>/4</p>
+    <p class="tally">
+      Correct <span id="tally-correct">0</span> Incorrect
+      <span id="tally-incorrect">0</span>
+    </p>
+  </div>
 
-       <script src="assets/js/script.js"></script>
-  </body>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>

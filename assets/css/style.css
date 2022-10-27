@@ -238,17 +238,6 @@ body {
     background-color: hsl(0, 62%, 69%);
     color: #2a2a2a;
 }
-/* .game-over {
-    display: none;
-    box-sizing: border-box;
-    height: 80%;
-    width: 80%;
-    max-height: 950px;
-    max-width: 850px;
-    margin: 10px auto;
-    padding: 1%;
-    background-color: silver;
-} */
 
 /* minimal media screen required as designed to be be responsive on all screen sizes */
 @media screen and  (max-width : 768px) {

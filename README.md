@@ -110,12 +110,14 @@ A 404 favicon error persisted throughout testing.  I searched the error in the [
 
 ## Validator Testing
 
-### Lighthouse
+### Lighthouse - passed
 
 [Lighthouse passed](https://8000-monimurray-higherlower-xyb9xfikhiq.ws-eu72.gitpod.io/)
 
 ![lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
-### HTML
+
+### HTML - passed
+
 No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fmonimurray.github.io%2Fhigher_lower%2F).
 
 ![W3C HTML Validator screenshot](assets/images/README-images/w3html-validator-screenshot.png)
