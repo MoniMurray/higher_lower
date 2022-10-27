@@ -136,20 +136,21 @@ Once addressed, Higher Lower [passed](https://jigsaw.w3.org/css-validator/valida
 ### JavaScript - passed
 
 No errors were found when passing through the official Jshint validator
+
 The following metrics were returned:
 Metrics
-There are 23 functions in this file.
+There are 25 functions in this file.
 
 Function with the largest signature take 2 arguments, while the median is 0.
 
-Largest function has 20 statements in it, while the median is 4.
+Largest function has 18 statements in it, while the median is 4.
 
 The most complex function has a cyclomatic complexity value of 6 while the median is 1.
 
 One warning
 Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (signIn, userGuess, checkGuess, counter, myReveal)
-Five unused variables
-- welcomeMsg
+
+Four unused variables
 - tallyCorrect
 - tallyIncorrect
 - answerCount
