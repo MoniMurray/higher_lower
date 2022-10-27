@@ -213,7 +213,7 @@ The Wireframe for this project was created using Balsamiq.
 
 #### Mentor Support
 
-Jubril rocks!!!  Enough said.
+My mentor is so kind and supportive. Being reminded that we are colleagues, solving problems together, got me through the most stressful of days!
 
 #### CI Tutor support
 
