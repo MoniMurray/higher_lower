@@ -170,17 +170,14 @@ function signIn (){
     playerName = document.getElementById("name").value.trim();
     console.log(playerName);
     if (playerName !== "") {
-    //    alert (`Welcome ${playerName}`);
     messageWelcome();
     
        hide();
        show();
     startGame();
      } else 
-        // alert ("You must log in to play this game");
-        messageAlertBox ();
-        // loginAlert.classList.add("show");
-    
+       messageAlertBox ();
+            
     } 
     
 // function to generate random numbers.  

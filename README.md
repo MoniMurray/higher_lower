@@ -41,9 +41,7 @@ Once the user has entered a username into the text box, they must then either mo
 
 The graphics of the 'Enter Game' button are consistent in style and colour with the game's icon for optimum user experience.
 
-The user is then welcomed by name.
-
-![welcome message screenshot](assets/images/README-images/welcome-message.png)
+The user's name is then used in all game and browser messages.
 
 #### The Game Area
 
@@ -53,7 +51,7 @@ This section will be displayed to the user upon successfully signing in.
 
 The user will be able to easily see five button icons displayed.  The first button icon displays the first number of the game.  The other four button icons display only a question mark.  The user will see two submit buttons below the five button icons, 'Higher' and 'Lower'.  The user selects either of these clickable buttons to enter their guess and progress through the game.
 
-![end of game message](assets/images/README-images/game-over screenshot.png)
+![gameend](assets/images/README-images/game-over screenshot.png)
 
 #### The Score Area
 
@@ -76,17 +74,22 @@ Features Left to Implement
 Another feature of the game in the future might be to have levels with a larger span of numbers generated from which the user will have to guess.
 
 ## Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+- The website and functionality of the game were tested on Chrome, Firefox, and on several mobile device sizes for responsivity.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-Test that user is prompted to input a username before starting the game.  Click on 'Enter Game', pop-up alert displays.
+- Test that user is prompted to input a username before starting the game.  Click on 'Enter Game', pop-up message displays - pass
 
 ![log-in prompt](assets/images/README-images/log-in-prompt.png)
+
+- Test that user name can be accepted by keyboard return - pass.
+
+- Test that user can click-closed each of the in-game and windows alert messages that appear - pass.
+
+- Test that username is used in the Welcome, Game Over message and windows replay alert - pass.
+
+- Test that use of trim() method on the username input box restricts the game from being played if spacebar is pressed as 'keydown' - pass.
+
+- Test that username is remembered on second and subsequent plays of the game - this is browser dependent and requires external game controle.
 
 ### Bugs
 
@@ -122,14 +125,16 @@ No errors were returned when passing through the official [W3C validator](https:
 
 ![W3C HTML Validator screenshot](assets/images/README-images/w3html-validator-screenshot.png)
 
-### CSS
+### CSS - passed
+
 Two minor errors were reported on first passing website through [W3C CSS Validator](https://jigsaw.w3.org/css-validator/).
 
 ![css validator errors](assets/images/README-images/w3c-css-validator-errors.png)
 
 Once addressed, Higher Lower [passed](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmonimurray.github.io%2Fhigher_lower%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en).
 
-### JavaScript
+### JavaScript - passed
+
 No errors were found when passing through the official Jshint validator
 The following metrics were returned:
 Metrics
