@@ -217,8 +217,7 @@ My mentor is so kind and supportive. Being reminded that we are colleagues, solv
 
 #### CI Tutor support
 
-Guidance from Tutor Support was invaluable during the JavaScript section of this project.  Tutor Alex helped me source and resolve a problem with jquery.  It was not working because I downloaded jquery instead of including the following link: <script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
-from here: https://releases.jquery.com/
+Guidance from Tutor Support was invaluable during the JavaScript section of this project.  
 
 #### Slack
 
