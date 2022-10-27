@@ -117,6 +117,23 @@ function messageAlertBox () {
     });
 }
 
+function messageWelcome () {
+    messageContainer = document.getElementsByClassName("messages")[0];
+    messageContainer.classList.add("show");
+    let personalisedMessage = `Welcome ${playerName}`;
+    document.getElementById("welcome-msg").innerHTML = personalisedMessage;
+    welcomeMsg.classList.add("show");
+    
+    let closeButton = document.getElementById("close-btn");
+    closeButton.addEventListener("click", function(){
+        let div = this.parentElement;
+        div.classList.add("hide");
+        messageContainer.classList.remove("show");
+        welcomeMsg.classList.remove("show");
+    
+    });
+}
+
 function messageGoodGuess () {
     messageContainer = document.getElementsByClassName("messages")[0];
     messageContainer.classList.add("show");
@@ -153,9 +170,9 @@ function signIn (){
     playerName = document.getElementById("name").value.trim();
     console.log(playerName);
     if (playerName !== "") {
-       alert (`Welcome ${playerName}`);
-    // messageAlertBox();
-    // welcomeMsg.classList.add("show");
+    //    alert (`Welcome ${playerName}`);
+    messageWelcome();
+    
        hide();
        show();
     startGame();
