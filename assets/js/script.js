@@ -79,7 +79,7 @@ const ansCount = parseInt(document.getElementById("answer-count").innerText);
     });
     // Add event listener for user clicking on the Play Again button
     document.getElementById("rePlay").addEventListener("click", function () {
-        if (this.getAttribute("data-type") === "submit") {
+        if (this.getAttribute("data-type") === "submit2") {
             alert (`Let's play again ${playerName}`);
         // show();
     //     hide();
