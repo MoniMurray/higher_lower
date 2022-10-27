@@ -185,18 +185,11 @@ I trialled using [JQuery](https://www.w3schools.com/jquery/default.asp) in this 
 
 In final touch ups I included [bespoke messages](https://www.w3schools.com/howto/howto_js_alert.asp) to the user using HTML, CSS and Javascript instead of more impersonal windows alerts, including [template literals](https://www.w3schools.com/js/tryit.asp?filename=tryjs_templates_quotes) in personalised messages.  [Replaying the game](https://www.w3schools.com/js/js_window_location.asp) was included by using the location.reload() property which I found [here](https://www.w3schools.com/jsref/met_loc_reload.asp).
 
-Occasionally my randomly generated numbers confused the player by having two numbers the same beside each other - in this case the next number is neither Higher nor Lower.  I used [this YouTube video](https://www.youtube.com/watch?v=5sNGqsMpW1E) to add a simple shuffle to my numbers array.  Having played the game alot myself during production, it added a little fun to my work!
+I used [this YouTube video](https://www.youtube.com/watch?v=5sNGqsMpW1E) to add a simple shuffle to my numbers array.  This will be more useful in implementing the *future features* idea of a larger number span. Having played the game alot myself during production, it added a little fun to my work!
 
 #### CI course content
 
 When I couldn't quite remember how to do something taught in the course content, I reviewed it on the [LMS](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)!
-
-
-In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
-
-You can break the credits section up into Content and Media, depending on what you have included in your project.
-
-## Content
 
 ## Technologies used
 
