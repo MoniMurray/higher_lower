@@ -111,6 +111,8 @@ A bug that was a development and style issue, but a bug nevertheless, was that t
 
 A 404 favicon error persisted throughout testing.  I searched the error in the [CI Slack channel](https://app.slack.com/client/T0L30B202/search/search-eyJkIjoiNDA0JTIwZXJyb3IlMjBmYXZpY29uIiwicSI6IlUwM0tFREVWNkU4IiwiciI6IjQwNCUyMGVycm9yJTIwZmF2aWNvbiJ9/thread/C7HD37Q1F-1596806951.039200) and found a suggestion to use `<link rel="shortcut icon" href="#"/>>` in the `<Head>`, and this fixed the bug.
 
+Pop-up messages must be user-clicked to close, otherwise they stack - no fix available.
+
 ## Validator Testing
 
 ### Lighthouse - passed
