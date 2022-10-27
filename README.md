@@ -112,7 +112,7 @@ A 404 favicon error persisted throughout testing.  I searched the error in the [
 
 ### Lighthouse
 
-Lighthouse passed
+[Lighthouse passed](https://8000-monimurray-higherlower-xyb9xfikhiq.ws-eu72.gitpod.io/)
 
 ![lighthouse validation screenshot](assets/images/README-images/lighthouse-validation-test.png)
 ### HTML
