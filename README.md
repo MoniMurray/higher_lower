@@ -59,6 +59,12 @@ The user will be able to easily see five button icons displayed.  The first butt
 
 This section will allow the user to see exactly how many correct answers they have provided.
 
+#### The RePlay Area
+
+The user will have an option to re-play the game by clicking the 'Play Again' button.  Clicking this button will reload the game.
+
+![replay screenshot](assets/images/README-images/replay-screenshot.png)
+
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 Features Left to Implement
